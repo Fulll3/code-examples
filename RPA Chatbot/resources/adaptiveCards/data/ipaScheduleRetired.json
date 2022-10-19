@@ -1,0 +1,33 @@
+[{
+  "title": "IPA Schedule Daily",
+  "properties": [
+      {
+          "key": "Robot name",
+          "value": "robot1"
+      },
+      {
+          "key": "Schedule Name",
+          "value": "schedule name A"
+      },
+      {
+        "key": "Retired",
+        "value": "No"
+    },
+    {
+        "key": "Frequency",
+        "value": "daily"
+    },
+      {
+          "key": "Calendar name",
+          "value": "calendar Name A"
+      },
+      {
+          "key": "Start time",
+          "value": "Stop after time"
+      },
+      {
+          "key": "08:00 CET",
+          "value": "09:00 CET"
+      }
+  ]
+}]

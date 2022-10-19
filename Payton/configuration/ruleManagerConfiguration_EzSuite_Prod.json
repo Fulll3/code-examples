@@ -1,0 +1,340 @@
+{
+  "__comment": "source: https://application.gms.siemens.com/content/10000043/pai/Robotics%2020/02_Demand%20Management/01_CF-R-FSS_NAM_AP_StatusBot/14.%20EZ-Suite/IOL2EZSuite_Rules_v1.xlsx?Web=1",
+  "configuration": [
+    {
+      "__comment": "========================================= Rejection Rules ===============================",
+      "invoiceStatus": "Rejected EZ1.1.1",
+      "conversationIndex": "EZ1.1.1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Missing .? Invalid contact name$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.2",
+      "conversationIndex": "EZ1.1.2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Incorrect Bill to.?/ Legal Name$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.3",
+      "conversationIndex": "EZ1.1.3",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Credit Balance/0\\$.?Do not pay$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.4",
+      "conversationIndex": "EZ1.1.4",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Invoice contains disallowed charges.*$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.5",
+      "conversationIndex": "EZ1.1.5",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Credit memo offsets Original invoice$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.6",
+      "conversationIndex": "EZ1.1.6",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^ICC invoice$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.7",
+      "conversationIndex": "EZ1.1.7",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Missing/Invalid PO number$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.8",
+      "conversationIndex": "EZ1.1.8",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Remit to info.* missing$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.9",
+      "conversationIndex": "EZ1.1.9",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Multiple PO number.?$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.10",
+      "conversationIndex": "EZ1.1.10",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Duplicate invoice$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.11",
+      "conversationIndex": "EZ1.1.11",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^PO cancelled.?Closed$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.12",
+      "conversationIndex": "EZ1.1.12",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Invalid invoice.*$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.13",
+      "conversationIndex": "EZ1.1.13",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Amount wrong$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.14",
+      "conversationIndex": "EZ1.1.14",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Paid with credit card$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.15",
+      "conversationIndex": "EZ1.1.15",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^E-invoicing vendor$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.17",
+      "conversationIndex": "EZ1.1.17",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Rescan-multiple invoices.?pages.*$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.18",
+      "conversationIndex": "EZ1.1.18",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "invoice_reason",
+          "value": "^Freight Vendor$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.19",
+      "conversationIndex": "EZ1.1.19",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "invoice_reason"         
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Rejected EZ1.1.16",
+      "conversationIndex": "EZ1.1.16",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Rejected$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= Routed for Approval-Contact ===============================",
+      "invoiceStatus": "Routed to Contact name for Approval",
+      "conversationIndex": "EZ1.2",
+      "rules": [
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "STATUS",
+          "value": "^Pending Approval$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= Routed to Contact name due to discrepancy ===============================",
+      "invoiceStatus": "Routed to Contact name due to discrepancy",
+      "conversationIndex": "EZ1.3",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "STATUS",
+          "value": "^Pending Discrepancy Resolution$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= Awaiting processing in Accounts payable===============================",
+      "invoiceStatus": "Awaiting processing in Accounts payable",
+      "conversationIndex": "EZ1.4",
+      "rules": [
+        {
+          "type": "patternWithoutSpace",
+          "pathToEntity": "STATUS",
+          "value": "^Pending S?AP$"
+        }
+      ]
+    }
+  ]
+}

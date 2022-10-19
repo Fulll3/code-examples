@@ -1,0 +1,40 @@
+{
+    "results": [
+        {
+            "invoiceNumber": "123ABC",
+            "invoiceDate": "10/05/2018",
+            "amount": "11.11",
+            "socCode": "XYZ",
+            "vendorId": "1",
+            "vendorName": "Siemens 1",
+            "invoiceStatus": "PAID"
+        },
+        {
+            "invoiceNumber": "456DEF",
+            "invoiceDate": "10/04/2018",
+            "amount": "22.33",
+            "socCode": "EWQ",
+            "vendorId": "2",
+            "vendorName": "Siemens 2",
+            "invoiceStatus": "CANCELLED"
+        },
+        {
+            "invoiceNumber": "789GF",
+            "invoiceDate": "10/03/2018",
+            "amount": "44.55",
+            "socCode": "OOO",
+            "vendorId": "3",
+            "vendorName": "Siemens 3",
+            "invoiceStatus": "REJECTED"
+        },
+        {
+            "invoiceNumber": "779AAA",
+            "invoiceDate": "10/01/2018",
+            "amount": "66.77",
+            "socCode": "LLK",
+            "vendorId": "4",
+            "vendorName": "Siemens 4",
+            "invoiceStatus": "IN PROGRESS"
+        }
+    ]
+}

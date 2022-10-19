@@ -1,0 +1,166 @@
+{
+  "MainDialog": {
+    "goodbye": "Auf Wiedersehen!"
+  },
+  "WelcomeDialog": {
+    "prodWelcomeUser": "Hallo, ich bin Lotta, dein persönlicher Assistent für Aufträge und Track&Trace. Die Daten werden von [“E2E Deliver Monitor”](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx) zur Verfügung gestellt. \nBitte gib eine Referenznummer ein, um den aktuellen Auftragstatus abzufragen.",
+    "devWelcomeUser": "Ich bin dein Chatbot für [%s] Auftragsstatus & Lieferungen, ein Service , der bereitgestellt wird von [“E2E Deliver Monitor”](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nIch kann dir den aktuelle Status eines Auftrags oder Lieferung zeigen."
+  },
+  "HelpDialog": {
+    "generalHelp": "Ich kann nur Anfrage mit 'Auftragsnummer', 'Bestellnummer', 'Lieferscheinnummer' oder 'UCR' beantworten."
+  },
+  "GatherReferenceNumberDialog": {
+    "promptUserForReferenceNumberFirstTime": "Bitte gib eine Referenzenummer ein.",
+    "promptUserForReferenceNumber": "Wenn du den Status zu einem anderen Auftrag sehen möchtest, gib bitte eine Referenznummer ein."
+  },
+  "ChoiceDialog": {
+    "promptUserForDocumentType": "Bitte wähle einen Dokumententyp um einen Lieferstatus zu sehen."
+  },
+  "DeliveryStatusDialogHelper": {
+    "noResultsFound": "Ich konnte keine Ergebnisse finden.",
+    "informMultipleCountries": "Ich habe mehr als ein Ergebnis gefunden. Bitte wähle das Land aus, in dem der Auftrag platziert wurde.",
+    "confirmUserSearch": "Ich suche nach Statusinformationen zu %s \"%s\"."
+  },
+  "DeliveryStatusDialog": {
+    "resultsDelayMessage": "Entschuldige, leider dauert die Suchanfrage länger als gewohnt",
+    "keepWaitingMessage": "Möchtest du weiterhin warten?",
+    "technicalIssuesMessage": "Entschuldie, aber aufgrund eines technischen Fehler kann ich das angefragte Dokument nicht finden. Bitte versuche es später noch einmal."
+  },
+  "SingleGroupDialogHelper": {
+    "promptToCheckShipment": "Ich habe folgende Lieferung gefunden.",
+    "displayResultsMessage": "Ich habe %s Lieferungen gefunden.",
+    "informTooManyResults": "Ich habe mehr als %s Positionen gefunden.",
+    "multipleSalesOrders": "Deine Kundenauftragsnummer beinhaltet mehrere Auftragsnummern. Bitte wähle eine aus, die du sehen möchtest."
+  },
+  "MultipleGroupsDialogHelper": {
+    "askUserToPickCountry": "Ich habe mehrere Ergebnisse gefunden. Bitte wähle das Land aus, in dem dieser Auftrag erstellt wurde.",
+    "noResults": "Ich kann keine Lieferungen für das ausgewählte Land finden."
+  },
+  "ItemSearchDialogHelper": {
+    "noResultForDeliveryNote": "Keine Ergebnisse gefunden für die eingegebene Lieferscheinnummer.",
+    "noResultForPurchaseOrder": "Keine Ergebnisse gefunden für die eingegebene Bestellnummer.",
+    "noResultForSalesOrder": "Keine Ergebnisse gefunden für die eingegebene Auftragsnummer.",
+    "promptToEnterDeliveryNoteItem": "Bitte gib eine Lieferscheinpositionsnummer ein.",
+    "retryPromptToEnterDeliveryNoteItem": "Bitte gib eine gültige Lieferscheinpositionsnummer ein.",
+    "promptToEnterPurchaseOrderItem": "Bitte gib eine Bestellnummer ein.",
+    "retryPromptToEnterPurchaseOrderItem": "Bitte gib eine gültige Bestellnummer ein.",
+    "promptToEnterSalesOrderItem": "Bitte gib eine Auftragspositionsnummer ein.",
+    "retryPromptToEnterSalesOrderItem": "Bitte gib eine gültige Auftragspositionsnummer ein.",
+    "promptToEnterUCRItem": "Bitte gib eine UCR Positionsnummer ein.",
+    "retryPromptToEnterUCRItem": "Bitte gib eine gültige UCR Positionsnummer ein.",
+    "nextPage": "Nächste Seite",
+    "previousPage": "Vorherige Seite",
+    "orderItems": "Auftragsposition",
+    "anotherItem": "Möchtest du eine weitere Position sehen?",
+    "seeDetailsInstructions": "Um Details zu einem Artikel anzuzeigen, können Sie auf die Bestellnummer des gewünschten Artikels klicken.",
+    "backToOverviewTable": "Übersichtstabelle nochmal anzeigen",
+    "specificItemNumber": "Geben Sie eine bestimmte Artikelnummer ein",
+    "newConversation": "Starten Sie ein neues Gespräch",
+    "salesOrderSelection": "Bitte wählen Sie den Kundenauftrag aus, zu dem dieser Artikel gehört"
+  },
+  "DocumentTypeDialog": {
+    "promptUserForDocumentType": "Bitte wähle einen Dokumententyp",
+    "promptUserInvalidDocumentType": "[%s]: Ich kann den Dokumententyp nicht erkennen."
+  },
+  "RestartDialog": {
+    "askForConfirmation": "Möchtest du die Konversation wirklich neu starten?",
+    "userConfirmed": "Ok!",
+    "userRejected": "Weiter geht's…",
+    "promptUserForDocumentType": "Du hast die Konversation erfolgreich neu gestartet. Um einen Auftragsstatus zu sehen, wähle bitte einen Dokumententyp."
+  },
+  "FeedbackDialog": {
+    "promptFeedback": "Bitte bewerte deine Erfahrung",
+    "promptUserForDocumentType": "Kann ich mit noch etwas dienen?",
+    "confirmChoices": "ja;nein",
+    "customFeedbackPrompt": "Vielen Dank. Es wäre klasse wenn du ein Feedback geben könntest, damit ich in Zukunft noch besser werde.",
+    "CustomFeedbackText": "Bitte lass mich an deinen Gedanken teilhaben.",
+    "Thanks": "Ich wünsche dir noch einen wunderschönen Tag! Deine Lotta",
+    "deliveryDocumentsPrompttext": "Um eine andere Lieferung zu prüfen, wähle bitte einen Dokumententyp."
+  },
+  "MaintenanceMiddleware": {
+    "maintenance": "Entschuldige, leider kann ich deine Frage aufgrund technischer Schwierigkeiten nicht beantworten. Bitte versuche es später noch einmal.",
+    "hanaErrorMessage": "WICHTIG: Momentan haben wir Probleme mit der Schnittstelle zu HANA-Datenbank. Falls deine Anfrage nicht beantwortet werden kann, versuche es bitte später noch einmal. Ich bitte diese Unannehmlichkeit zu verzeihen."
+  },
+  "AdaptiveCards": {
+    "orderFulfilled": "Auftrag erledigt",
+    "goodsIssued": "Warenausgang bei der Lieferstelle",
+    "instructionSent": "Transportanweisung gesendet",
+    "onWay": "auf dem Weg zum Bestimmungsort",
+    "default": "dein Auftrag wird bearbeitet",
+    "noMilestones": "Ich kann keine Meilensteine finden.",
+    "destination": "Zielort",
+    "origin": "Ursprungsort",
+    "history": "Historie",
+    "milestone": "Meilenstein",
+    "schedule": "Momentan geplant am %s",
+    "delivered": "Geliefert am: %s",
+    "customerRequestedDate": "Kundenwunschtermin",
+    "firstConfirmedDeliveryDate": "Erstbestätigter Termin",
+    "lastConfirmedDeliveryDate": "Letztbestätigter Termin",
+    "shippingLocation": "Lieferstelle",
+    "AWB": "AWB",
+    "lastMilestone": "Letzter Meilenstein",
+    "carrier": "Transporteur",
+    "carrierTracking": "Transporteur Tracking",
+    "buyer": "Auftraggeber",
+    "ucr": "UCR",
+    "showAdditionalDetails": "Zeige weitere Details",
+    "itemNo": "Positionsnummer",
+    "orderStatus": "Auftragsstatus",
+    "salesOrderNumber": "Auftragsnummer",
+    "quantity": "Menge",
+    "delieveredHeading": "Geliefert am",
+    "customerPurchaseNumber": "Kundenauftragsnummer",
+    "MLFB": "MLFB",
+    "salesOrderNumberShippingLocation": "LIAZ",
+    "deliveryNoteDate": "Lieferscheindatum",
+    "deliveryNoteNo": "Lieferscheinnummer",
+    "trackingNo": "Auftragsnummer"
+  },
+  "DeliveryDocument": {
+    "noDate": "Angefordertes Datum ist nicht verfügbar",
+    "noFCDD": "FCDD ist nicht verfügbar",
+    "noLCDD": "LCDD ist nicht verfügbar",
+    "noShippingLocation": "Lieferstelle ist nicht verfügbar",
+    "noBuyer": "Auftraggeber ist nicht verfügbar",
+    "noUCR": "UCR ist nicht verfügbar",
+    "noAWB": "AWB ist nicht verfügbar",
+    "noCarrierTracking": "Transporteur tracking ist nicht verfügbar",
+    "noCarrier": "Transporteur ist nicht verfügbar",
+    "MST_LSTAR": "Auftragseingang",
+    "MST_L100": "Auftragseingang geklärt ",
+    "MST_L200": "Bestellung/Bestellabruf ",
+    "MST_L210": "Bestelleingang Lieferstelle/Werk ",
+    "MST_L220": "Auftragseingang geklärt in Lieferstelle ",
+    "MST_L230": "Bestätigung Bestellung/Bestellabruf ",
+    "MST_L240": "Übergabe an Folgeprozess ",
+    "MST_L290": "Anstoß zur Lieferung ",
+    "MST_L300": "Bereitstellung zum Versand ",
+    "MST_L310": "Ex Rampe ",
+    "MST_L311": "Übernahme durch Spediteur/Frachtführer ",
+    "MST_L313": "Übergabe an den nächsten Spediteur ",
+    "MST_L315": "Übernahme/Einlagerung durch Hauptlaufspediteur ",
+    "MST_L318": "Auslagerung durch Hauptlaufspediteur ",
+    "MST_L320": "Beginn des Hauptlauftransports ",
+    "MST_L330": "Ankunft am Empfangsflug/-seehafen ",
+    "MST_L335": "Bereitstellung zur Verzollung und Empfänger informiert",
+    "MST_L340": "Beginn der Eingangszollabfertigung ",
+    "MST_L350": "Ende der Zollabfertigung ",
+    "MST_L360": "Beginn lokaler Transport ",
+    "MST_L380": "Eintreffen am Konsolidierungspunkt ",
+    "MST_L390": "Beginn lokaler Transport vom Konsolidierungspunkt zum Kunden ",
+    "MST_L400": "Material am Bestimmungsort "
+  },
+  "DialogUtil": {
+    "yesNo": "ja;nein",
+    "salesOrder": "Auftragsnummer",
+    "purchaseOrder": "Bestellnummer",
+    "deliveryNote": "Lieferscheinnummer",
+    "unknown": "I bin mir nicht sicher",
+    "ucr": "UCR Nummer",
+    "customerPo": "Kundenauftragsnummer"
+  },
+  "Handlers": {
+    "uncaught": "Oops!, da ging irgendetwas schief..."
+  }
+}

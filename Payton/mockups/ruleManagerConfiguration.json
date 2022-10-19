@@ -1,0 +1,77 @@
+{
+    "configuration": [
+        {
+            "invoiceStatus": "IsLaterThanToday",
+            "rules": [
+                {
+                    "type": "isLaterThanToday",
+                    "pathToEntity": "DATE",
+                    "format": "YYYYMMDD"
+                }
+            ]
+        },
+        {
+            "invoiceStatus": "Cancelled",
+            "rules": [
+                {
+                    "type": "pattern",
+                    "pathToEntity": "AUGBL",
+                    "value": "^(17\\d{8})|(16\\d{8})$"
+                }
+            ]
+        },
+        {
+            "invoiceStatus": "ORTest_MultiplePaths",
+            "rules": [
+                {
+                    "type": "isFilled",
+                    "pathToEntity": "AUGBL2|AUGBL3"
+                }
+            ]
+        },
+        {
+            "invoiceStatus": "Cancelled",
+            "system": "E1P",
+            "rules": [
+                {
+                    "type": "pattern",
+                    "pathToEntity": "AUGBL",
+                    "value": "^(10\\d{8})$"
+                }
+            ]
+        },
+        {
+            "invoiceStatus": "SkipValueTest",
+            "conversationIndex": "1.1.1.1.2.1",
+            "rules": [
+                {
+                    "type": "isEmpty",
+                    "pathToEntity": "AUGBL"
+                },
+                {
+                    "type": "skip",
+                    "pathToEntity": ""
+                }
+            ]
+        },
+        {
+            "invoiceStatus": "EmptyValueTest",
+            "conversationIndex": "1.1.1.1.2.1",
+            "rules": [
+                {
+                    "type": "isEmpty",
+                    "pathToEntity": "AUGBL"
+                }
+            ]
+        },
+        {
+            "invoiceStatus": "FilledValueTest",
+            "rules": [
+                {
+                    "type": "isFilled",
+                    "pathToEntity": "AUGBL"
+                }
+            ]
+        }
+    ]
+}

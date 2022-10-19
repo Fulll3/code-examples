@@ -1,0 +1,64 @@
+{
+  "alive": true,
+  "developersEmail": [
+    "developer@siemens.com"
+  ],
+  "confidenceThreshold": 0.70,
+  "services": [
+    {
+      "factory": "state/ConversationStateFactory",
+      "name": "ConversationState"
+    },
+    {
+      "factory": "state/UserStateFactory",
+      "name": "UserState"
+    },
+    {
+      "factory": "state/UserRepositoryFactory",
+      "name": "UserRepository"
+    },
+    {
+      "factory": "interruption/InterruptionInputFactory",
+      "name": "InterruptionInput"
+    },
+    {
+      "factory": "watson/data/WatsonAssistantFactory",
+      "name": "WatsonAssistant",
+      "version": "WATSON_ASSISTANT_VERSION",
+      "apiKey": "WATSON_ASSISTANT_API_KEY",
+      "url": "WATSON_ASSISTANT_URL",
+      "assistantId": "WATSON_ASSISTANT_ID"
+    },
+    {
+      "factory": "watson/domain/WatsonAssistantDomainFactory",
+      "name": "WatsonAssistantDomain"
+    },
+    {
+      "factory": "watson/data/WatsonAssistantFactory",
+      "name": "WatsonAssistantQna",
+      "version": "WATSON_ASSISTANT_QNA_VERSION",
+      "apiKey": "WATSON_ASSISTANT_QNA_API_KEY",
+      "url": "WATSON_ASSISTANT_QNA_URL",
+      "assistantId": "WATSON_ASSISTANT_QNA_ID"
+    },
+    {
+      "factory": "watson/domain/WatsonAssistantQnaDomainFactory",
+      "name": "WatsonAssistantQnaDomain"
+    },
+    {
+      "factory": "splunk/data/SplunkConnectorFactory",
+      "name": "SplunkConnector",
+      "token": "SPLUNK_AUTH_TOKEN",
+      "host": "SPLUNK_HOST"
+    },
+    {
+      "factory": "schedule/data/ScheduleDataConnectorFactory",
+      "name": "ScheduleDataConnector",
+      "host":"SCHEDULE_CONNECTOR_HOST",
+      "azureKey":"SCHEDULE_CONNECTOR_AZURE_SUBSCRIPTION_KEY",
+      "cert": "SCHEDULE_CONNECTOR_CERT",
+      "key": "SCHEDULE_CONNECTOR_KEY",
+      "passphrase": "SCHEDULE_CONNECTOR_PASSHPRASE"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[{
+  "robotName": "Robot1",
+  "scheduleName": "schedule name 1",
+  "startDate": 1519211809934,
+  "endDate":   1519211810000,
+  "frequency": "daily",
+  "calendarName": "calendarName"
+},
+{
+  "robotName": "Robot1",
+  "scheduleName": "schedule name 1",
+  "startDate": 1519211809934,
+  "endDate":   1519211810000,
+  "frequency": "daily",
+  "calendarName": "calendarName"
+}]

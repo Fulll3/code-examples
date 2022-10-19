@@ -1,0 +1,82 @@
+{
+  "name": "coe-template",
+  "version": "0.0.1",
+  "description": "Chatbot solution",
+  "main": "dist/Main.js",
+  "scripts": {
+    "start": "node ./dist/Main.js",
+    "start:dev": "cross-env NODE_ENV=dev tsc-watch --pretty --preserveWatchOutput --outDir ./dist --onSuccess \"node dist/Main.js\"",
+    "prebuild": "rm -rf ./dist/",
+    "build": "tsc",
+    "build:start": "npm run build && npm start",
+    "bs": "npm run build && npm start",
+    "test": "nyc mocha -r ts-node/register ./test/**/*.ts",
+    "ci-test": "mocha -r ts-node/register ./test/*.ts ",
+    "lint": "tslint --config tslint.json 'src/**/*.ts'",
+    "lint:fix": "tslint --fix --config tslint.json 'src/**/*.ts'"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "src/**"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "test/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@code.siemens.com/botanica-bots/e2e-di-delivery-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "adaptivecards": "^2.10.0",
+    "adaptivecards-templating": "^0.1.0-alpha1",
+    "applicationinsights": "^1.0.5",
+    "axios": "^0.26.0",
+    "azure-search-client": "^3.1.5",
+    "botanica": "git+https://code.siemens.com/botanica-libraries/botanica.git#v2.1.0",
+    "botbuilder": "^4.4.0",
+    "botbuilder-azure": "^4.4.0",
+    "botbuilder-dialogs": "^4.4.0",
+    "botbuilder-schema": "^4.0.0-m1.5",
+    "botbuilder-solutions": "^4.4.5",
+    "botframework-schema": "^4.4.0",
+    "check-types": "^11.1.2",
+    "dotenv": "^6.0.0",
+    "i18n": "^0.8.3",
+    "ibm-watson": "^5.2.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.29.1",
+    "object-sizeof": "^1.6.0",
+    "os": "^0.1.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8",
+    "restify": "^7.2.1",
+    "restify-errors": "^6.1.1",
+    "splunk-sdk": "^1.10.0",
+    "table": "^6.8.0",
+    "winston": "^3.1.0",
+    "winston-azure-application-insights": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/i18n": "^0.8.5",
+    "@types/lodash": "^4.14.155",
+    "@types/mocha": "^7.0.2",
+    "@types/sinon": "^7.0.11",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "mocha": "^6.2.3",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^4.6.4"
+  }
+}

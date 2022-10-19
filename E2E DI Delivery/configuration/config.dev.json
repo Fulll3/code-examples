@@ -1,0 +1,50 @@
+{
+  "Alive": true,
+  "DevelopersEmail": [
+    "allison.goncalves.ext@siemens.com",
+    "adam.kovarik@siemens.com"
+  ],
+  "ItemSearchThreshold": 10,
+  "confidenceThreshold": 0.70,
+  "hanaRespondWaitTimeInMs": 30000, 
+  "services": [
+    {
+      "type": "HanaConnectorFactory",
+      "name": "hanaConnector",
+      "url": "HANA_CONNECTOR_URL",
+      "user": "HANA_CONNECTOR_USERNAME",
+      "password": "HANA_CONNECTOR_PASSWORD"
+    },
+    {
+      "type": "ConversationStateFactory",
+      "name": "conversationState"
+    },
+    {
+      "type": "UserStateFactory",
+      "name": "userState"
+    },
+    {
+      "type": "InterruptionRecognizerFactory",
+      "name": "interruptionRecognizer",
+      "file": "resources/interruption.list.json"
+    },
+    {
+      "type": "WatsonAssistantFactory",
+      "name": "WatsonAssistant",
+      "version": "WATSON_ASSISTANT_VERSION",
+      "apiKey": "WATSON_ASSISTANT_API_KEY",
+      "url": "WATSON_ASSISTANT_URL",
+      "assistantId": "WATSON_ASSISTANT_ID"
+    },
+    {
+      "type": "ItemOverviewConnectorFactory",
+      "name": "ItemOverviewConnector",
+      "itemOverviewEndpoint": "ITEM_OVERVIEW_ENDPOINT",
+      "myIdEndpoint": "MYID_ENDPOINT",
+      "myidClientId": "MYID_CLIENT_ID",
+      "myidKey": "MYID_KEY",
+      "myidPassphrase": "MYID_PASSPHRASE",
+      "myidCert": "MY_ID_CERT"
+    }
+  ]
+}

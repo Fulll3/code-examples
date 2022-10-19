@@ -1,0 +1,166 @@
+{
+  "MainDialog": {
+    "goodbye": "Au revoir"
+  },
+  "WelcomeDialog": {
+    "prodWelcomeUser": "Bonjour, je suis Lotta, votre assistant personnel de suivi et de traçabilité des commandes logistiques. Les données seront fournies par [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nVeuillez entrer votre numéro de référence pour connaître l'état  de votre commande.",
+    "devWelcomeUser": "Il s'agit de votre chatbot [%s] Order Status & Shipment, un service fourni par le [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nJe peux vous fournir l'état actuel de votre « Commande client » ou « Livraison »"
+  },
+  "HelpDialog": {
+    "generalHelp": "Je ne peux répondre qu'aux requêtes basées sur « Numéro de commande client », « Numéro de bon de commande », « Numéro de bon de livraison » ou « Numéro du bordereau de livraison »."
+  },
+  "GatherReferenceNumberDialog": {
+    "promptUserForReferenceNumberFirstTime": "Veuillez saisir le numéro de référence Siemens.",
+    "promptUserForReferenceNumber": "Si vous souhaitez obtenir le statut pour une autre commande, veuillez saisir un numéro de référence Siemens"
+  },
+  "ChoiceDialog": {
+    "promptUserForDocumentType": "Veuillez sélectionner le type de document si vous souhaitez vérifier l'état de la livraison."
+  },
+  "DeliveryStatusDialogHelper": {
+    "noResultsFound": "Aucun résultat trouvé. »",
+    "informMultipleCountries": "Plus d'un résultat trouvé. Veuillez sélectionner le pays dans lequel la commande a été st traitée.",
+    "confirmUserSearch": "Je recherche des informations pour %s \"%s »."
+  },
+  "DeliveryStatusDialog": {
+    "resultsDelayMessage": "Désolé, il faut plus de temps que prévu pour récupérer cette information",
+    "keepWaitingMessage": "Voulez-vous continuer à attendre?",
+    "technicalIssuesMessage": "Désolé mais en raison de problèmes techniques, je ne suis pas en mesure de trouver le document demandé. Veuillez essayer de nouveau  plus tard"
+  },
+  "SingleGroupDialogHelper": {
+    "promptToCheckShipment": "J'ai trouvé l'envoi suivant.",
+    "displayResultsMessage": "J'ai trouvé %s envois.",
+    "informTooManyResults": "J'ai trouvé plus de %s d'articles.",
+    "multipleSalesOrders": "Votre  commande client contient plusieurs commandes Siemens. Veuillez sélectionner celle que vous souhaitez voir."
+  },
+  "MultipleGroupsDialogHelper": {
+    "askUserToPickCountry": "J'ai trouvé plus d'un résultat. Veuillez sélectionner le pays dans lequel la commande a été traitée.",
+    "noResults": "Pas d'envoi trouvé pour le pays choisi"
+  },
+  "ItemSearchDialogHelper": {
+    "noResultForDeliveryNote": "Aucun résultat trouvé pour la position d'article du bon de livraison fourni.",
+    "noResultForPurchaseOrder": "Aucun résultat trouvé pour la position de l'article de la commande d'achat",
+    "noResultForSalesOrder": "Aucun résultat trouvé pour la position d'article de commande client fourni.",
+    "promptToEnterDeliveryNoteItem": "Veuillez saisir la position de l'article du bordereau de livraison.",
+    "retryPromptToEnterDeliveryNoteItem": "Veuillez saisir une position d'article valable pour le bordereau de livraison.",
+    "promptToEnterPurchaseOrderItem": "Veuillez saisir la position article de la commande d'achat.",
+    "retryPromptToEnterPurchaseOrderItem": "Veuillez saisir la position d'article valide du bon de commande.",
+    "promptToEnterSalesOrderItem": "Veuillez saisir une position d'article  pour la commande de vente.",
+    "retryPromptToEnterSalesOrderItem": "Veuillez saisir une position d'article valable  pour la commande de vente.",
+    "promptToEnterUCRItem": "Veuillez saisir la position de l'article du bordereau de livraison.",
+    "retryPromptToEnterUCRItem": "Veuillez saisir une position de l'article du bordereau de livraison valable",
+    "nextPage": "Page suivante",
+    "previousPage": "Page précédente",
+    "orderItems": "Position de l'articles de la commande",
+    "anotherItem": "Voulez-vous consulter un autre article?",
+    "seeDetailsInstructions": "Pour voir les détails d'un article, vous pouvez cliquer sur le numéro de commande de l'article souhaité.",
+    "backToOverviewTable": "Montrez-moi à nouveau le tableau récapitulatif",
+    "specificItemNumber": "Tapez un numéro d'article spécifique",
+    "newConversation": "Démarrer une nouvelle conversation",
+    "salesOrderSelection": "Veuillez sélectionner la commande client à laquelle cet article appartient."
+  },
+  "DocumentTypeDialog": {
+    "promptUserForDocumentType": "Veuillez sélectionner le type de document",
+    "promptUserInvalidDocumentType": "[%s] : Je ne suis pas en mesure de reconnaître ce type de document."
+  },
+  "RestartDialog": {
+    "askForConfirmation": "Voulez-vous vraiment relancer notre conversation?",
+    "userConfirmed": "D'accord!",
+    "userRejected": "Alors, continuons...",
+    "promptUserForDocumentType": "Vous avez redémarré la conversation avec succès. Pour voir l'état  de votre commande, veuillez sélectionner le type de document"
+  },
+  "FeedbackDialog": {
+    "promptFeedback": "Veuillez évaluer votre expérience",
+    "promptUserForDocumentType": "Puis-je vous aider avec autre chose?",
+    "confirmChoices": "oui;non",
+    "customFeedbackPrompt": "Merci. Nous apprécierons vos commentaires. Ceci nous permettra de nous améliorer.",
+    "CustomFeedbackText": "Quel est  votre avis ?",
+    "Thanks": "Je vous souhaite une merveilleuse journée! Bien à vous, Lotta",
+    "deliveryDocumentsPrompttext": "Pour vérifier une autre livraison, veuillez sélectionner le type de document"
+  },
+  "MaintenanceMiddleware": {
+    "maintenance": "Désolé. Malheureusement des problèmes techniques m'empêche de répondre à vos questions . Veuillez essayer plus tard.",
+    "hanaErrorMessage": "IMPORTANT : Nous rencontrons actuellement des problèmes de connexion à notre base de données. Si nous n'avons pas répondu a votre demande, veuillez  essayer plus tard. Nous nous excusons pour le désagrément."
+  },
+  "AdaptiveCards": {
+    "orderFulfilled": "Commande livrée",
+    "goodsIssued": "Problèmes à l'usine",
+    "instructionSent": "Données transport envoyées",
+    "onWay": "En route vers la destination",
+    "default": "votre commande est en cours de traitement",
+    "noMilestones": "Aucun jalon trouvé.",
+    "destination": "Destination",
+    "origin": "Origine",
+    "history": "Historique",
+    "milestone": "Jalon",
+    "schedule": "Actuellement planifié pour %s",
+    "delivered": "Livré le: %s",
+    "customerRequestedDate": "Date souhaitée client",
+    "firstConfirmedDeliveryDate": "Première date de livraison confirmée",
+    "lastConfirmedDeliveryDate": "Dernière date de livraison confirmée",
+    "shippingLocation": "Lieu d'expédition",
+    "AWB": "Numéro de tracking",
+    "lastMilestone": "Dernier jalon",
+    "carrier": "Transporteur",
+    "carrierTracking": "Tracking du transporteur",
+    "buyer": "Acheteur",
+    "ucr": "Bordereau de livraison",
+    "showAdditionalDetails": "Afficher des détails supplémentaires",
+    "itemNo": "Position d'article",
+    "orderStatus": "État de la commande",
+    "salesOrderNumber": "N° de commande client",
+    "quantity": "Quantité",
+    "delieveredHeading": "Livré le",
+    "customerPurchaseNumber": "Numéro de commande client",
+    "MLFB": "Référence produit",
+    "salesOrderNumberShippingLocation": "LIAZ",
+    "deliveryNoteDate": "Date du bon de livraison",
+    "deliveryNoteNo": "Numéro de bordereau de livraison",
+    "trackingNo": "Numéro de suivi"
+  },
+  "DeliveryDocument": {
+    "noDate": "La date demandée n'est pas disponible",
+    "noFCDD": "Première date confirmée n'est pas disponible",
+    "noLCDD": "Dernière date confirmée n'est pas disponible",
+    "noShippingLocation": "Le lieu d'expédition n'est pas disponible",
+    "noBuyer": "L'acheteur n'est pas disponible",
+    "noUCR": "UCR n'est pas disponible",
+    "noAWB": "Numéro de tracking n'est pas disponible",
+    "noCarrierTracking": "Le suivi transporteur n'est pas disponible",
+    "noCarrier": "Le nom du transporteur n'est pas disponible",
+    "MST_LSTAR": "Commande du client",
+    "MST_L100": "Commande clarifiée",
+    "MST_L200": "Commande / Réception de commande",
+    "MST_L210": "Commande/Réception de commande au centre de livraison / usine",
+    "MST_L220": "Commande clarifiée au centre de livraison / usine",
+    "MST_L230": "Confirmation de commande",
+    "MST_L240": "Transfert au processus suivant",
+    "MST_L290": "Début de la livraison",
+    "MST_L300": "Prêt à être expédié",
+    "MST_L310": "Remis au transporteur",
+    "MST_L311": "Réception par le transporteur",
+    "MST_L313": "Transfert vers le transporteur suivant",
+    "MST_L315": "Réception par transporteur principal",
+    "MST_L318": "Préparation expédition par transporteur principal",
+    "MST_L320": "Début du transport par le transporteur principal",
+    "MST_L330": "Arrivée à l'aéroport/ port",
+    "MST_L335": "Préparation dédouanement. Destinataire informé.",
+    "MST_L340": "Début du dédouanement",
+    "MST_L350": "Fin du dédouanement",
+    "MST_L360": "Début du transport local",
+    "MST_L380": "Matériel au point de consolidation",
+    "MST_L390": "Début du transport local du point de consolidation au client",
+    "MST_L400": "Matériel au point de destination"
+  },
+  "DialogUtil": {
+    "yesNo": "oui;non",
+    "salesOrder": "Numéro de commande de vente",
+    "purchaseOrder": "Numéro  commande d'achat",
+    "deliveryNote": "Numéro du bordereau de livraison",
+    "unknown": "Je ne suis pas sûr",
+    "ucr": "Bordereau de livraison",
+    "customerPo": "Numéro de commande du client"
+  },
+  "Handlers": {
+    "uncaught": "Oups!, une erreur s'est produite ..."
+  }
+}

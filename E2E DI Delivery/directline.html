@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- include your custom styles for the webchat -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <!-- container to render the webchat into -->
+        <div id="webchat"></div>
+
+        <!-- include the botframework webchat from microsoft -->
+        <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+        <!-- include our botanice webchat that handles the authentication -->
+        <script src="https://botanica.siemens.cloud/channels/webchat/dist/botanicaWebchat.bundle.js?273fb77d58693818e623"></script>
+        <!-- setup the botanica webchat -->
+        <script>
+            (function() {
+                new BotanicaWebchat({
+                    element: "#webchat",
+                    botId: "",
+                    botEnv: "dev",
+                    loginButton: true,
+                });
+            })();
+        </script>
+    </body>
+</html>

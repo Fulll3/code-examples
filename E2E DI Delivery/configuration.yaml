@@ -1,0 +1,37 @@
+name: "„Lotta“ - DI LOG E2E Bot"                                                #30
+fullName: "„Lotta“ - DI LOG E2E Bot"                                            #100
+description: "Logistics Order Track & Trace Assistance - your DI LOG E2E Bot (by E2E Deliver Monitor). Search for orders and deliveries to get an overview and the actual status with milestones immediately."  #4000
+shortDescription: "Search for orders and deliveries to get an overview and the actual status." #80
+channels:
+  - webchat
+  - directline
+  - teams
+logging:
+  users:
+    - Z002KD9D
+    - Z003T17A
+    - Z00429MB
+    - Z0046NCX
+image:
+  small: "resources/images/Lotta - icon small.png"                                       # png of 32px x 32px
+  normal: "resources/images/Lotta - icon large.png"                                     # png of 192px x 192px
+privacyUrl: "https://new.siemens.com/global/en/general/privacy-notice.html"
+termsOfUseUrl: "https://new.siemens.com/global/en/general/terms-of-use.html"
+websiteUrl: "https://new.siemens.com/"
+alerting:
+  description: E2E DI Lotta Healthcheck alert
+  query: >
+   traces
+   | where message has "Healtcheck for" and message has "has failed"
+  timeWindow: 15
+  actions: 
+    - /subscriptions/4130508c-d14f-4522-872e-3f6cd9f33e17/resourceGroups/alerts_sending_email/providers/microsoft.insights/actiongroups/action_email_alert
+teamsManifest:
+  commandLists:
+    - scopes:
+        - personal
+        - team
+        - groupchat
+      commands:
+        - title: restart
+          description: restart conversation

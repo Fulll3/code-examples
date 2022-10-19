@@ -1,0 +1,49 @@
+ARE,SAP System,Client,Country Key,Company Code,IOL company code,EZ-Suite SOC,Siemens Company Legal Name,Mail Code,In scope/Out of scope,View
+5490,CUP,400,US,5490,5490,SCC,Siemens Capital Company,MC-IMA036,In Scope,CUP01
+4458,PT2,100,US,1000,1000,SDDTI,"Siemens Demag Delaval Turbomachinery, Inc.",MC-IMA072,In Scope,PT201
+476T,OPP,100,US,1800,1800,AAC,Advanced Airfoil Components LLC,MC-IMA093,In Scope,OPP01
+552N,OPP,100,US,1300,1300,SEI-1300,"Siemens Energy, Inc.",MC-IMA016,In Scope,OPP01
+553N,PT2,100,US,3000,3000,SITI,"Siemens Energy Inc, Oil and Gas Division",MC-IMA074,In Scope,PT201
+449T,RBP,100,US,4413,4413,PG-WIND,Siemens Gamesa Renewable Energy Ltd,MC-IMA060,In Scope,RBP03
+4413,PD2,10,US,W001,W001,SWPC,"Siemens Energy, Inc.",MC-IMA010,In Scope,PD201
+4494,PD2,10,US,W004,W004,SWGS,Siemens Generation Services Company,MC-IMA011,In Scope,PD201
+4452,PD2,10,US,W005,W005,SFSI,Siemens Fossil Services Inc.,MC-IMA012,In Scope,PD201
+561N,PD2,10,US,W030,W030,NEM,Siemens Heat Transfer Technology Corp,MC-IMA094,In Scope,PD201
+4413,PD2,10,US,W100,W100,SWOS,Siemens Power Generation Operating Services Company,MC-IMA013,In Scope,PD201
+4453,PD2,10,US,W103,W103,SWSC,"Siemens Power Generation Service Company, Ltd.",MC-IMA014,In Scope,PD201
+563P,PS1,,US,31,31,US_563P_E,Siemens Energy Inc,MC-IMA087,In Scope,PS102
+4413,PD2,10,US,B042,B042,SWISC-MEX,"Siemens Power Generation Service Company, LTD - Mexico Branch ",MC-IMA039,In Scope,PD201
+4413,PD2,10,US,B043,B043,SWISC-PR,"Siemens Power Generation Service Company, LTD - Puerto Rico Branch ",MC-IMA040,In Scope,PD201
+267776,E1P,100,US,3000,3000C,SCS-SCH,Siemens Caring Hands,MC-IMA051,In Scope,E1P01
+29057,E1P,100,US,3001,3001,SCS-SF,Siemens Foundation,MC-IMA021,In Scope,E1P01
+5580,E1P,100,US,4472,4472,SSL-SAP,"GSS North America, A Division of Siemens Corporation",MC-IMA022,In Scope,E1P01
+5636,E1P,100,US,5636,5636,SMI,SMI Holding LLC,MC-IMA037,In Scope,E1P01
+5638,E1P,100,US,5638,5638,SFS-SAP,Siemens Financial Services,MC-IMA027,In Scope,E1P01
+439N,E1P,100,US,4433,4433,SBT-SAP,"Siemens Industry, Inc",MC-IMA034,In Scope,E1P01
+439N,E1P,100,US,5620,5620,SEA_CORP,"Siemens Industry, Inc",MC-IMA031,In Scope,E1P01
+488W,E1P,100,US,9461,9461,SII-9461,"Siemens Mobility, Inc.",MC-IMA084,In Scope,E1P01
+439N,E1P,100,US,9462,9462,INC-MVSG,"Siemens Industry, Inc.",MC-IMA083,In Scope,E1P01
+551P,E1P,100,US,9463,9463,OMNETRIC,Omnetric Corp,MC-IMA086,In Scope,E1P01
+435E,E1P,100,US,435E,435E,SEA_SCH,"Siemens Electrical, LLC",MC-IMA054,In Scope,E1P01
+439N,E1P,100,US,439Z,439Z,SII,"Siemens Industry, Inc. ",MC-IMA068,In Scope,E1P01
+563D,P41,20,US,US10,US10,SMS-P51,Siemens Medical Solutions (P41),MC-IMA029,In Scope,P4101
+469G,P41,20,US,US40,US40,DX,Siemens Healthcare Diagnostics (DPC/BAYER)(P40),MC-IMA050,In Scope,P4101
+470T,P41,20,US,US50,US50,D2I,"Dedicated to Imaging, LLC",MC-IMA092,In Scope,P4101
+563H,P40,10,US,0100,0100,CSG,Siemens Medical Solutions (P40),MC-IMA024,In Scope,P4001
+430N,P40,10,US,0200,0200,DX-P40,Siemens Healthcare Diagnostics (P40),MC-IMA066,In Scope,P4001
+460W,P41,20,CA,CA10,CA10,Epocal,Epocal Inc,MC-IMA097,In Scope,P4101
+420W,P41,20,US,US41,US41,SHL,Siemens Helathcare Laboratories,MC-IMA095,In Scope,P4101
+4497,R3P,300,CA,3300,3300,SMPI-CAN,Siemens Milltronics Process Instruments Inc.,MC-IMA071,In Scope,R3P01
+400P,R3P,300,CA,3320,3320,RUGGED-CAN,Siemens Canada Limited,MC-IMA085,In Scope,R3P01
+598A,PTC,500,CA,2000,2000T,TRENCH-CAN,Trench Limited,MC-IMA078,In Scope,PTC01
+5545,D35,22,CA,0010,0010,SCAN,Siemens Canada LTD,MC-IMA061,In Scope,D3501
+5545,D35,22,CA,0010,0010,SBT-CAN,Siemens Building Technologies (Canada),MC-IMA062,In Scope,D3501
+490N,PT2,100,CA,2000,2000D,SCL,Siemens Canada LTD,MC-IMA073,In Scope,PT201
+557E,D35,22,CA,557E,557E,557E-CAN,Siemens Transformers,MC-IMA064,In Scope,D3501
+562P,PS1,,CA,34,34,CA_562P_E,Siemens Canada LTD,MC-IMA089,In Scope,PS102
+421T,D35,22,CA,421T,421T,421T-CAN,Siemens Gamesa Renewable Energy Ltd,MC-IMA091,In Scope,D3501
+422S,D35,22,CA,422S,422S,SHC-CAN,Siemens Healthcare Limited,MC-IMA090,In Scope,D3501
+518N,RBP,100,CA,518N,518N,BLADE-CAN,Siemens Gamesa Renewable Energy Ltd,MC-IMA077,In Scope,RBP03
+539W,D35,22,CA,539W,539W,SML-CAN,"Siemens Mobility, Canada",MC-IMA096,In Scope,D3501
+540H,P03,340,US,5000,5000,SPLM-5000,Siemens PLM,MC-IMA100,In Scope,P0301
+573H,P03,340,US,5400,5400,SPLM-CAN,SPLM Canada,MC-IMA103,In Scope,P0301

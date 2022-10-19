@@ -1,0 +1,167 @@
+{
+	"MainDialog": {
+		"goodbye": "Goodbye"
+	},
+	"WelcomeDialog": {
+		"prodWelcomeUser": "Hello, I am Lotta, your personal logistic order track & trace assistant. Data will be provided by [“E2E Deliver Monitor”](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nPlease enter your reference number for your actual order status.",
+		"devWelcomeUser": "This is your [%s] Order Status & Shipment Chatbot, a Service provided by the [“E2E Deliver Monitor”](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nI can provide you current status of your “Sales Order” or “Delivery”."
+	},
+	"HelpDialog": {
+		"generalHelp": "I can only answer to queries based on 'Sales Order Number', 'Purchase Order Number', 'Delivery Note Number' or 'UCR Number'."
+	},
+	"GatherReferenceNumberDialog": {
+		"promptUserForReferenceNumberFirstTime": "Please enter Siemens reference number.",
+		"promptUserForReferenceNumber": "If you want to get a status for another order, please enter a Siemens Reference Number"
+	},
+	"ChoiceDialog": {
+		"promptUserForDocumentType": "Please select document type if you want to check delivery status."
+	},
+	"DeliveryStatusDialogHelper": {
+		"noResultsFound": "I am sorry, I cannot find the respective reference number. Please try again.",
+		"informMultipleCountries": "I have found more than one result. Please select the country were the order is processed.",
+		"confirmUserSearch": "I am looking for status information for %s \"%s\"."
+	},
+	"DeliveryStatusDialog": {
+		"resultsDelayMessage": "Our apologies, it’s taking longer than usual to retrieve this information",
+		"keepWaitingMessage": "Would you like to continue waiting?",
+		"technicalIssuesMessage": "I am sorry, the interface to my data base is currently not working. Please try it again later."
+	},
+	"SingleGroupDialogHelper": {
+		"promptToCheckShipment": "I have found following shipment.",
+		"displayResultsMessage": "I have found %s shipments.",
+		"informTooManyResults": "I have found more than %s items.",
+		"multipleSalesOrders": "Your customer purchase order contains multiple sales orders. Please select which one you would like to see. "
+	},
+	"MultipleGroupsDialogHelper": {
+		"askUserToPickCountry": "I have found more than one result. Please select the country were the order is processed.",
+		"noResults": "I wasn't able to find any shipments for chosen country."
+	},
+	"ItemSearchDialogHelper": {
+		"noResultForDeliveryNote": "No results found for the provided Delivery Note item number.",
+		"noResultForPurchaseOrder": "No results found for the provided Purchase Order item.",
+		"noResultForSalesOrder": "No results found for the provided Sales Order item number.",
+		"promptToEnterDeliveryNoteItem": "Please, enter the Delivery Note item.",
+		"retryPromptToEnterDeliveryNoteItem": "Please enter valid Delivery Note item number.",
+		"promptToEnterPurchaseOrderItem": "Please, enter the Purchase Order Item.",
+		"retryPromptToEnterPurchaseOrderItem": "Please enter valid Purchase Order item number.",
+		"promptToEnterSalesOrderItem": "Please, enter the Sales Order item.",
+		"retryPromptToEnterSalesOrderItem": "Please enter valid Sales Order item number.",
+		"promptToEnterUCRItem": "Please, enter the UCR item number.",
+		"retryPromptToEnterUCRItem": "Please enter valid UCR item number.",
+		"nextPage": "Next Page",
+		"previousPage": "Previous Page",
+		"orderItems": "Order items",
+		"anotherItem": "Would you like to see another item?",
+		"seeDetailsInstructions": "To see details of an item you can click desired item order number.",
+		"backToOverviewTable": "Show me again overview table",
+		"specificItemNumber": "Type in a specific item number",
+		"newConversation": "Start a new conversation",
+		"salesOrderSelection": "Please select sales order to which this item belongs"
+	},
+	"DocumentTypeDialog": {
+		"promptUserForDocumentType": "Please select document type.",
+		"promptUserInvalidDocumentType": "[%s]: I am not able to recognize this document type."
+	},
+	"RestartDialog": {
+		"askForConfirmation": "Do you really want to restart our conversation?",
+		"userConfirmed": "Ok!",
+		"userRejected": "So, let's continue...",
+		"promptUserForDocumentType": "You successfully restarted conversation. To see your actual order status please select document type."
+	},
+	"FeedbackDialog": {
+		"promptFeedback": "Please rate your experience",
+		"promptUserForDocumentType": "Can I help you with something else?",
+		"confirmChoices": "yes;no",
+		"customFeedbackPrompt": "Thank you. It would be great if you could leave some feedback for further improvement?",
+		"CustomFeedbackText": "Please let me know your thoughts.",
+		"Thanks": "I wish you a wonderful day! Yours, Lotta",
+		"deliveryDocumentsPrompttext": "To check other delivery please select document type."
+	},
+	"MaintenanceMiddleware": {
+		"maintenance": "I'm sorry. Unfortunately I am unable to answer your questions as I am currently experiencing technical issues. Please try again later.",
+		"hanaErrorMessage": "IMPORTANT: We are currently experiencing issues with connection to HANA database. If your request is not answered please try it later. We appologize for any inconvenience."
+	},
+	"AdaptiveCards": {
+		"orderFulfilled": "order fulfilled",
+		"goodsIssued": "Goods issues at shipping location",
+		"instructionSent": "transportation instruction sent",
+		"onWay": "on it's way to the destination",
+		"default": "your order is being processed",
+		"noMilestones": "I was not able to find any milestones.",
+		"destination": "Destination",
+		"origin": "Origin",
+		"history": "History",
+		"milestone": "Milestone",
+		"schedule": "Currently scheduled on %s",
+		"delivered": "Delivered on: %s",
+		"customerRequestedDate": "Customer Requested Date",
+		"firstConfirmedDeliveryDate": "First Confirmed Delivery Date",
+		"lastConfirmedDeliveryDate": "Last Confirmed Delivery Date",
+		"shippingLocation": "Shipping Location",
+		"AWB": "AWB",
+		"lastMilestone": "Last milestone",
+		"carrier": "Carrier",
+		"carrierTracking": "Carrier tracking",
+		"buyer": "Buyer",
+		"ucr": "UCR",
+		"showAdditionalDetails": "Show additional details",
+		"itemNo": "Item No.",
+		"orderStatus": "Order status",
+		"salesOrderNumber": "Sales Order Nr.",
+		"quantity": "Quantity",
+		"delieveredHeading": "Delivered on",
+		"customerPurchaseNumber": "Customer purchase order",
+		"MLFB": "MLFB",
+    "salesOrderNumberShippingLocation": "LIAZ",
+    "deliveryNoteDate": "Delivery Note Date",
+    "deliveryNoteNo": "Delivery Note Number",
+    "trackingNo": "Tracking Number",
+    "PONumber": "PO Number"
+	},
+	"DeliveryDocument": {
+		"noDate": "Requested date is not available",
+		"noFCDD": "FCDD is not available",
+		"noLCDD": "LCDD is not available",
+		"noShippingLocation": "Shipping location is not available",
+		"noBuyer": "Buyer is not available",
+		"noUCR": "UCR is not available",
+		"noAWB": "AWB is not available",
+		"noCarrierTracking": "Carrier tracking is not available",
+		"noCarrier": "Carrier is not available",
+		"MST_LSTAR": "Customer Order Entry",
+		"MST_L100": "Order Entry Clarified",
+		"MST_L200": "Order/Order Call-Off",
+		"MST_L210": "Order/Order Call-Off at Delivering Unit/Works",
+		"MST_L220": "Order Entry Clarified at Delivering Unit/Works",
+		"MST_L230": "Order/Order Call-Off Confirmation",
+		"MST_L240": "Handover to Subsequent Process",
+		"MST_L290": "Initiation of Delivery",
+		"MST_L300": "Ready to Ship",
+		"MST_L310": "Ex Ramp",
+		"MST_L311": "Receipt by Shipping Agent / Carrier",
+		"MST_L313": "Transfer to Next Shipping Agent",
+		"MST_L315": "Receipt Storage by Main Shipping Agent",
+		"MST_L318": "Removal by Main Shipping Agent",
+		"MST_L320": "Start of Main Carriage Transport",
+		"MST_L330": "Arrival at Destination Airport / Seaport",
+		"MST_L335": "Provision for Import Customs, Consignee Informed",
+		"MST_L340": "Start of Customs Clearence",
+		"MST_L350": "End of Customs Clearence",
+		"MST_L360": "Start of Local Transport",
+		"MST_L380": "Material at Consolidation Point",
+		"MST_L390": "Start of Local Transport from Consolidation Point to the Customer",
+		"MST_L400": "Material at Point of Destination"
+	},
+	"DialogUtil": {
+		"yesNo": "yes;no",
+		"salesOrder": "Sales Order Number",
+		"purchaseOrder": "Purchase Order Number",
+		"deliveryNote": "Delivery Note Number",
+		"unknown": "I am not sure",
+		"ucr": "UCR Number",
+		"customerPo": "Customer Purchase Order"
+	},
+	"Handlers": {
+		"uncaught": "Oops!, something went wrong..."
+	}
+}

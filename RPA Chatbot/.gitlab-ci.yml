@@ -1,0 +1,89 @@
+cache:
+  paths:
+    - node_modules
+  
+stages:
+  - build
+  - test
+  - deploy
+
+build:api:
+  image: node:8.11.1
+  stage: build
+  script:
+    - npm i
+    - npm run build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1h
+  tags:
+    - BOT
+  only:
+    - dev
+    - master
+
+test:api:
+  image: node:8.11.1
+  stage: test
+  script:
+    - npm install
+  tags:
+    - BOT
+  only:
+    - dev
+    - master
+  
+test:api:vuln:
+  image: node:latest
+  stage: test
+  script:
+    - npm audit
+  allow_failure: true
+  tags:
+    - BOT
+  only:
+    - dev
+    - mater
+
+deploy:api:dev:
+  stage: deploy
+  image: node:$NODEJS_CI_VERSION
+  before_script:
+    - apt update && apt install git
+  script:
+    - mkdir -p /tmp/build
+    - cp -ar `ls -A | grep -vw ".git"` /tmp/build
+    - cd /tmp/build
+    - "sed -i s*dist/*src/*g .gitignore"
+    - git config --global user.email "bot.botanica.it@siemens.com"
+    - git config --global user.name "Botanica Bot"
+    - git init
+    - git add .
+    - git commit -m "commit ${CI_COMMIT_REF_SLUG}"
+    - git push -f https://${CI_PROJECT_ID}-${CI_JOB_ID}:${CI_JOB_TOKEN}@deploy.botanica.siemens.cloud/${CI_PROJECT_NAME} master:dev
+  only:
+    - dev
+  tags:
+    - BOT
+  
+deploy:api:prod:
+  stage: deploy
+  image: node:$NODEJS_CI_VERSION
+  before_script:
+    - apt update && apt install git
+  script:
+    - mkdir -p /tmp/build
+    - cp -ar `ls -A | grep -vw ".git"` /tmp/build
+    - cd /tmp/build
+    - "sed -i s*dist/*src/*g .gitignore"
+    - git config --global user.email "bot.botanica.it@siemens.com"
+    - git config --global user.name "Botanica Bot"
+    - git init
+    - git add .
+    - git commit -m "commit ${CI_COMMIT_REF_SLUG}"
+    - git push -f https://${CI_PROJECT_ID}-${CI_JOB_ID}:${CI_JOB_TOKEN}@deploy.botanica.siemens.cloud/${CI_PROJECT_NAME} master
+  only:
+    - master
+  tags:
+    - BOT

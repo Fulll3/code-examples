@@ -1,0 +1,2634 @@
+{
+  "__comment": "source: https://application.gms.siemens.com/content/10000043/pai/Robotics%2020/02_Demand%20Management/01_CF-R-FSS_NAM_AP_StatusBot/7.%20DBs/IOL2HANA_StatusLogic_Review_vFinal.xlsx?Web=1",
+  "configuration": [
+    {
+      "__comment": "=========================================2.1 Payment Blocked on Document level============================",
+      "invoiceStatus": "Blocked for quality review",
+      "conversationIndex": "1.1.2.2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorMasterLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuality"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Blocked for PO date discrepancy",
+      "conversationIndex": "1.1.2.2.1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorMasterLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuality"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Blocked for PO discrepancy",
+      "conversationIndex": "1.1.2.2.2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorMasterLevel"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuality"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Blocked for PO price discrepancy",
+      "conversationIndex": "1.1.2.2.3",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorMasterLevel"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuality"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Blocked for PO quantity/Goods receipts discrepancy",
+      "conversationIndex": "1.1.2.2.4",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorMasterLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuality"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.2 Payment Block on Vendor Level===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and PO blocked for Price discrepancy",
+      "conversationIndex": "1.1.2.2.5",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8",
+      "conversationIndex": "1.1.2.2.6",
+      "rules": [
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_DocLevel"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and blocked for PO discrepancy",
+      "conversationIndex": "1.1.2.2.7",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy",
+      "conversationIndex": "1.1.2.2.8",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and blocked for PO date discrepancy",
+      "conversationIndex": "1.1.2.2.14",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 3",
+      "conversationIndex": "1.1.2.2.10",
+      "rules": [
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_DocLevel"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction and Blocked for PO discrepancy",
+      "conversationIndex": "1.1.2.2.11",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction and Blocked for PO price discrepancy",
+      "conversationIndex": "1.1.2.2.12",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction and Blocked for PO Quantity/Goods receipts discrepancy",
+      "conversationIndex": "1.1.2.2.13",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction and Blocked for PO Quantity/Goods receipts discrepancy 2",
+      "conversationIndex": "1.1.2.2.15",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 E1P Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|M|T)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|M|T)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|M|T)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 D35 Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|M)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|M)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|M)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 P03 Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 PTC Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 P40 Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|H|L|S)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|H|L|S)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|H|L|S)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 P41 Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|H|L|S)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|H|L|S)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|H|L|S)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 PS1 Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "PS1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|B)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "PS1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|B)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "PS1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|B)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.3 RBP Payment Blocked on Management Decision===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.9",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|B)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|B)$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Management direction 2",
+      "conversationIndex": "1.1.2.2.10",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^(A|B)$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.2 E1P Payment Block on Vendor Level===============================",
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and PO blocked for Price discrepancy",
+      "conversationIndex": "1.1.2.2.5",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8",
+      "conversationIndex": "1.1.2.2.6",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_DocLevel"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and blocked for PO discrepancy",
+      "conversationIndex": "1.1.2.2.7",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy",
+      "conversationIndex": "1.1.2.2.8",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held awaiting IRS W9 or W8 and blocked for PO date discrepancy",
+      "conversationIndex": "1.1.2.2.14",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^R$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^W$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBPrice"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "PBDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PBQuantity"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed Default===============================",
+      "invoiceStatus": "Awaiting Payment",
+      "conversationIndex": "1.1.2.1",
+      "rules": [
+        {
+          "type": "isFilled",
+          "pathToEntity": "PaymentTerms"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "isLaterThanToday",
+          "pathToEntity": "NetDueDate",
+          "format": "YYYYMMDD"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_DocLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*[25].*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^[ARE]$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed E1P===============================",
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^Z$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Q$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "E1P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1[0567].*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed D35===============================",
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^O$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Y$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN2",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*15.*$"
+        }, 
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Y$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^(C|O)$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^(Z|N|W)$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "D35",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*(11|17).*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed OPP===============================",
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "OPP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*13.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "OPP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*6.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "OPP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*6.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^5|FT$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "OPP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*6.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Q$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed P03===============================",
+      "invoiceStatus": "Awaiting Payment",
+      "conversationIndex": "1.1.2.1",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "isLaterThanToday",
+          "pathToEntity": "NetDueDate",
+          "format": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "Document_PaymentMethod"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "P03",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^X$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed P40===============================",
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*[1-9]\\d{3}$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^O|S$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^7|T|W$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*5.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Q$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed P41===============================",
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*[1-9]\\d{3}$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^O|S$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^7|T|W$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*5.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Q$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed PD2===============================",
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "PD2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*5.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "PD2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*3.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "PD2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^5|FT$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "PD2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*3.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^6$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed PT2===============================",
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "PT2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "PS1",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^L|F$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "PT2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^U|FT$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "PT2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Q$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed PTC===============================",
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*6.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C|S$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^T$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - ORBIAN",
+      "conversationIndex": "1.1.1.1.2.3",
+      "system": "PTC",
+      "rules": [
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^Q$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^Q$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed R3P===============================",
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "R3P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "R3P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "R3P",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*4.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^(U|L|LU)$"
+        }
+      ]
+    },
+    {
+      "__comment": "=========================================2.4 Payment Processed RBP===============================",
+      "invoiceStatus": "Awaiting Payment",
+      "conversationIndex": "1.1.2.1",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "isFilled",
+          "pathToEntity": "PaymentTerms"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDocument"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "isLaterThanToday",
+          "pathToEntity": "NetDueDate",
+          "format": "YYYYMMDD"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "CompanyCode",
+          "value": "^4413$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Cancelled",
+      "conversationIndex": "1.1.1.2",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*1.*$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "DocumentType_ClearedDocument",
+          "value": "^AB$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "CompanyCode",
+          "value": "^4413$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - Check payment",
+      "conversationIndex": "1.1.1.1.2.2",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "NetDueDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^C$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "CompanyCode",
+          "value": "^4413$"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Paid - EFT payment",
+      "conversationIndex": "1.1.1.1.2.1",
+      "system": "RBP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "ClearingDocument",
+          "value": "^0*2.*$"
+        },
+        {
+          "type": "isFilled",
+          "pathToEntity": "ClearingDate"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "Document_PaymentMethod|Vendor_PaymentMethod",
+          "value": "^5|FT$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "CompanyCode",
+          "value": "^4413$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= IOL Status - Stale Block===============================",
+      "invoiceStatus": "Payment held due to Check being stale",
+      "conversationIndex": "1.1.2.2.16",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^S$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Check being stale 2",
+      "conversationIndex": "1.1.2.2.16",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^S$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= PT2 IOL Status - Stale Block===============================",
+      "invoiceStatus": "Payment held due to Check being stale",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "PT2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^F$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Check being stale 2",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "PT2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^F$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= PD2 IOL Status - Stale Block===============================",
+      "invoiceStatus": "Payment held due to Check being stale",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "PD2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^F$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Check being stale 2",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "PD2",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^F$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= OPP IOL Status - Stale Block===============================",
+      "invoiceStatus": "Payment held due to Check being stale",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "OPP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^Y$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Check being stale 2",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "OPP",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^Y$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= P41 IOL Status - Stale Block===============================",
+      "invoiceStatus": "Payment held due to Check being stale",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^Z$"
+        },
+        {
+          "type": "isEmpty",
+          "pathToEntity": "PaymentBlock_VendorLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Check being stale 2",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "P41",
+      "rules": [
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_DocLevel",
+          "value": "^Z$"
+        },
+        {
+          "type": "pattern",
+          "pathToEntity": "PaymentBlock_VendorLevel",
+          "value": "^A$"
+        }
+      ]
+    },
+    {
+      "__comment": "========================================= P40 IOL Status - Stale Block===============================",
+      "invoiceStatus": "Payment held due to Check being stale",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "skip",
+          "pathToEntity": "PaymentBlock_DocLevel"
+        }
+      ]
+    },
+    {
+      "invoiceStatus": "Payment held due to Check being stale 2",
+      "conversationIndex": "1.1.2.2.16",
+      "system": "P40",
+      "rules": [
+        {
+          "type": "skip",
+          "pathToEntity": "PaymentBlock_DocLevel"
+        }
+      ]
+    }
+  ]
+}

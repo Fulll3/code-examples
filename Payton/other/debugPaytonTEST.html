@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+  This is a sample HTML file which shows how to embed a full-window instance of WebChat.
+  1. Build the project: "npm run build"
+  2. Start a web server: "npm run start"
+  3. Aim your browser at "http://localhost:8000/samples?[parameters as listed below]"
+  For ease of testing, several parameters can be set in the query string:
+    * s = Direct Line secret, or
+    * t = Direct Line token (obtained by calling Direct Line's Generate Token)
+    * domain = optionally, the URL of an alternate Direct Line endpoint
+    * webSocket = set to 'true' to use WebSocket to receive messages (currently defaults to false)
+    * userid, username = id (and optionally name) of bot user
+    * botid, botname = id (and optionally name) of bot
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Bot Chat</title>
+  <link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+		
+        overflow: hidden;
+        padding: 0;
+      }
+	  
+	  #BotChatGoesHere {
+        border: 1px solid #333;
+        float: left;
+        height: 600px;
+        position: relative;
+        width: 460px;
+		margin: 0;
+        overflow: hidden;
+        padding: 0;
+      }
+    </style>
+</head>
+
+<body>
+  <div id='botDiv' style='height: 38px; position: fixed; bottom: 0; background-color: #fff'>
+    <div id='botTitleBar' style='height: 38px;width: 400px; position:fixed; cursor: pointer;z-index: 1000;' onclick="showChat();"></div>
+    <div id="BotChatGoesHere" class="wc-wide"></div>
+  </div>
+  <script src="https://cdn.botframework.com/botframework-webchat/latest/botchat-es5.js"></script>
+  <script type="application/javascript">
+    var firstMessage = false;
+
+    $(window).on('load', function () {
+      showChat();
+    });
+
+    function showChat() {
+      var botDiv = document.querySelector('#botDiv');
+
+      if (!firstMessage) {
+        // add token to authorize
+        botConnection.postActivity({ type: "event", value: "replace with token", from: user, name: "greeting" }).subscribe(function (id) {
+        });
+        firstMessage = true;
+      }
+
+      $('#botDiv').animate({
+        height: botDiv.style.height == '600px' ? '38px' : '600px'
+      }, 500);
+    }
+
+
+    // Fill userId, userName, botId, botName and secret below
+    var model = {
+      "userId": "userId",
+      "userName": "userName",
+      "botId": "botId",
+      "botName": "botName",
+      "secret": "secret",
+      "directLineUrl": "https://webchat.botframework.com/v3/directline",
+    };
+
+    const params = BotChat.queryParams(location.search);
+    const user = { id: model.userId };
+    const bot = { id: model.botId, name: model.botName };
+
+    const botConnection = new BotChat.DirectLine({
+      secret: model.secret,
+      token: model.token,
+      domain: model.directLineUrl,
+      webSocket: true
+    });
+
+    BotChat.App({
+      botConnection: botConnection,
+      resize: 'detect',
+      sendTyping: true,
+      user: user,
+      bot: { id: model.botId, name: model.botName }
+    }, document.getElementById('BotChatGoesHere'));	
+  </script>
+</body>
+
+</html>

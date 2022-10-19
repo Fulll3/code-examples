@@ -1,0 +1,21 @@
+
+export enum DialogNames {
+  MainDialog = "mainDialog",
+  WelcomeDialog = "welcomeDialog",
+  GatherParametersDialog = "gatherParametrs",
+  GartherUserInfoDialog = "gartherUserInfoDialog",
+  HelpDialog = "helpDialog",
+  ExampleWaterfallDialog = "exampleWaterfallDailog",
+  NoIntentDialog = "noIntentDialog",
+  ActiveLearningDialog = "activeLearningDialog",
+  WaterfallDialog = "waterfallDialog",
+  GatherReferenceNumberDialog = "GatherReferenceNumberDialog",
+  RestartDialog = "restartDialog",
+  DeliveryStatusDialog = "deliveryStatusDialog",
+  ConfirmationDialog = "confirmationDialog",
+  DocumentTypeDialog = "documentTypeDialog",
+  ItemSearchDialog = "ItemSearchDialog",
+  SingleGroupDialog = "SingleGroupDialog",
+  MultipleGroupsDialog = "MultipleGroupsDialog",
+  FeedbackDialog = "FeedbackDialog",
+}

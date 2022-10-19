@@ -1,0 +1,39 @@
+{
+	"WelcomeDialog": {
+		"welcomeUser": "Hi! I’m Jane, the RPA Operations chatbot. Ask me about your use case!"
+	},
+	"EchoDialog": {
+		"promptAnyInput": "Please, say anything so that I can echo back"
+	},
+	"HelpDialog": {
+		"generalHelp": "I cannot do a lot for now, am the simple Coe-Template for chatbots. Plase, check the gitlab's README file before starting your development."
+	},
+	"Handlers": {
+		"uncaught": "I'm sorry. Unfortunately I am unable to answer your questions as I am currently experiencing technical issues. Please try again later."
+	},
+	"RestartDialog": {
+		"confirmRestart": "Do you want to restart the conversation flow?",
+		"retryConfirmRestart": "Please, say YES if you want to restart the conversation, otherwise say NO",
+		"userRejected": "So, let's continue",
+		"userConfirmed": "Alright, let's get started again, but I cannot do a lot for now, am the simple Coe-Template for chatbots. Plase, read about me before starting your development."
+	},
+	"MaintenanceMiddleware": {
+		"maintenance": "Sorry, I am under maintenance now, please try again later."
+	},
+  "InitialOptionsDialog": {
+		"intialMesssage": "I can help you with topics below.",
+		"options": "show schedule topics;another option"
+	},
+	"ScheduleMainDialog": {
+		"scheduleOptions": "all schedules;only retired schedules;next planned run;Is use case retired?",
+		"ipaNumberPrompt": "Please enter IPA number"
+	},
+	"FreeSlotsDialog": {
+		"robotNumberPrompt": "Please enter robot number",
+		"robotNumberReprompt": "Please enter robot in number in following format: R0000",
+		"thanksForProvidingNumber": "Thank you. I am searching for robot %s"
+	},
+	"ProcessStatusDialog": {
+		"ipaNumberPrompt": "ProcessStatusDialog.ipaNumberPrompt"
+	}
+}

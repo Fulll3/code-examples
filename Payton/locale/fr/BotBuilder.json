@@ -1,0 +1,5 @@
+{
+  "__comment": "localized messages are saved in index.json",
+  "text_minLength_error": "%(message)s",
+  "text_maxLength_error": "%(message)s"
+}

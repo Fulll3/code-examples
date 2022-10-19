@@ -1,0 +1,32 @@
+name: RPA Operations - Jane
+fullName: RPA Operations - Jane
+description: >
+  Hi!
+  I am Jane, the RPA Operations chatbot. I am here to automatically answer your questions about your use cases: running hours, schedules, the next available slot, total running hours during a certain month, status of the robot's run, etc.
+  You can ask me directly what you need, or use the buttons to get to what you want.
+  Feel free to explore my FAQ section!
+  Hope to see you soon!
+  Jane.
+shortDescription: Hi! I’m Jane, the RPA Operations chatbot. Ask me about your use case!
+channels:
+  - webchat
+  - teams
+logging:
+  users:
+    - Z00429MB
+    - Z003T17A
+    - Z0046NCX
+image:
+  small: "resources/icons/rpa-icon-small.png"                                       # png of 32px x 32px
+  normal: "resources/icons/rpa-icon-medium.png"                                     # png of 192px x 192px
+privacyUrl: "https://new.siemens.com/global/en/general/privacy-notice.html"
+termsOfUseUrl: "https://new.siemens.com/global/en/general/terms-of-use.html"
+websiteUrl: "https://new.siemens.com/"
+alerting:
+  description: RPA Operations Chatbot Healthcheck alert
+  query: >
+   traces
+   | where message has "Healtcheck for" and message has "has failed"
+  timeWindow: 15
+  actions: 
+    - /subscriptions/4130508c-d14f-4522-872e-3f6cd9f33e17/resourceGroups/alerts_sending_email/providers/microsoft.insights/actiongroups/action_email_alert

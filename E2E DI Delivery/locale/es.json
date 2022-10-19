@@ -1,0 +1,167 @@
+{
+  "MainDialog": {
+    "goodbye": "Adiós"
+  },
+  "WelcomeDialog": {
+    "prodWelcomeUser": "Hola, soy Lotta, su asistente personal de seguimiento y rastreo de pedidos logísticos. Los datos serán proporcionados por [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nIndique su número de referencia para consultar el estado real de su pedido.",
+    "devWelcomeUser": "Este es su [%s] Order Status & Shipment Chatbot, un servicio proporcionado por el [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nPuedo proporcionarle el estado actual de su \"Pedido\" o \"Entrega\""
+  },
+  "HelpDialog": {
+    "generalHelp": "Solo puedo responder a consultas basadas en 'Número de pedido de ventas', 'Número de pedido de compra', 'Número de albarán de entrega' o 'Número UCR'."
+  },
+  "GatherReferenceNumberDialog": {
+    "promptUserForReferenceNumberFirstTime": "Introduzca el número de referencia de Siemens.",
+    "promptUserForReferenceNumber": "Si desea obtener un estado para otro pedido, indique un número de referencia de Siemens"
+  },
+  "ChoiceDialog": {
+    "promptUserForDocumentType": "Seleccione el tipo de documento si desea comprobar el estado de la entrega."
+  },
+  "DeliveryStatusDialogHelper": {
+    "noResultsFound": "No pude encontrar ningún resultad.",
+    "informMultipleCountries": "He encontrado más de un resultado. Seleccione el país donde se procesa el pedido.",
+    "confirmUserSearch": "Estoy buscando información de estado para %s \"%s\"."
+  },
+  "DeliveryStatusDialog": {
+    "resultsDelayMessage": "Nuestras disculpas, está tardando más de lo habitual en recuperar esta información",
+    "keepWaitingMessage": "¿Te gustaría seguir esperando?",
+    "technicalIssuesMessage": "Lo siento, pero debido a problemas técnicos no puedo encontrar el documento solicitado. Por favor, pruébalo más tarde"
+  },
+  "SingleGroupDialogHelper": {
+    "promptToCheckShipment": "He encontrado el siguiente envío.",
+    "displayResultsMessage": "He encontrado %s envíos.",
+    "informTooManyResults": "He encontrado más de %s artículos.",
+    "multipleSalesOrders": "Su orden de compra de cliente contiene varios pedidos de ventas. Seleccione cuál le gustaría ver."
+  },
+  "MultipleGroupsDialogHelper": {
+    "askUserToPickCountry": "He encontrado más de un resultado. Seleccione el país donde se procesa el pedido.",
+    "noResults": "No pude encontrar ningún envío para el país elegido"
+  },
+  "ItemSearchDialogHelper": {
+    "noResultForDeliveryNote": "No se han encontrado resultados para el número de artículo del albarán de entrega proporcionado.",
+    "noResultForPurchaseOrder": "No se han encontrado resultados para la posición del pedido de compra indicado.",
+    "noResultForSalesOrder": "No se han encontrado resultados para la posición del pedido de venta indicado.",
+    "promptToEnterDeliveryNoteItem": "Por favor, introduzca la posición del Albarán de entrega.",
+    "retryPromptToEnterDeliveryNoteItem": "Por favor, introduzca una posición válida del Albarán de entrega.",
+    "promptToEnterPurchaseOrderItem": "Por favor, introduzca la posición del Pedido de compra.",
+    "retryPromptToEnterPurchaseOrderItem": "Por favor, introduzca una posición válida del Pedido de compra.",
+    "promptToEnterSalesOrderItem": "Por favor, introduzca la posición del Pedido de venta.",
+    "retryPromptToEnterSalesOrderItem": "Por favor, introduzca una posición válida del Pedido de venta.",
+    "promptToEnterUCRItem": "Por favor, introduzca la posición del albarán.",
+    "retryPromptToEnterUCRItem": "Por favor, introduzca una posición válida del albarán.",
+    "nextPage": "Página siguiente",
+    "previousPage": "Página anterior",
+    "orderItems": "Posiciones de pedido",
+    "seeDetailsInstructions": "Para ver los detalles de un artículo, puede hacer clic en el número de pedido del artículo deseado.",
+    "anotherItem": "¿Te gustaría ver otra posición?",
+    "backToOverviewTable": "Show me again overview table",
+    "specificItemNumber": "Escriba un número de artículo específico",
+    "newConversation": "Iniciar una nueva conversación",
+    "salesOrderSelection": "Seleccione el pedido de venta al que pertenece este artículo"
+  },
+  "DocumentTypeDialog": {
+    "promptUserForDocumentType": "Seleccione el tipo de documento",
+    "promptUserInvalidDocumentType": "[%s]: No soy capaz de reconocer este tipo de documento."
+  },
+  "RestartDialog": {
+    "askForConfirmation": "¿Realmente quieres reiniciar nuestra conversación?",
+    "userConfirmed": "¡De acuerdo!",
+    "userRejected": "Entonces, sigamos...",
+    "promptUserForDocumentType": "Ha reiniciado correctamente la conversación. Para ver el estado real de su pedido, seleccione el tipo de documento"
+  },
+  "FeedbackDialog": {
+    "promptFeedback": "Por favor, califique su experiencia",
+    "promptUserForDocumentType": "¿Puedo ayudarte con algo más?",
+    "confirmChoices": "sí;no",
+    "customFeedbackPrompt": "Gracias. Sería genial si pudieras dejar algunos comentarios para seguir mejorando",
+    "CustomFeedbackText": "Por favor, hágame saber su opinión.",
+    "Thanks": "¡Te deseo un día maravilloso! Tuyo, Lotta",
+    "deliveryDocumentsPrompttext": "Para comprobar otra entrega, seleccione el tipo de documento"
+  },
+  "MaintenanceMiddleware": {
+    "maintenance": "Lo siento. Desafortunadamente, no puedo responder a sus preguntas, ya que actualmente estoy experimentando problemas técnicos. Inténtelo de nuevo más tarde.",
+    "hanaErrorMessage": "IMPORTANTE: Actualmente estamos experimentando problemas con la conexión a la base de datos HANA. Si su solicitud no es respondida, inténtelo más tarde. Nos disculpamos por cualquier inconveniente"
+  },
+  "AdaptiveCards": {
+    "orderFulfilled": "pedido completado",
+    "goodsIssued": "Salida de mercancías del lugar de envío",
+    "instructionSent": "instrucciones de transporte enviadas",
+    "onWay": "en camino hacia el destino",
+    "default": "su pedido está siendo procesado",
+    "noMilestones": "No pude encontrar ningún hito.",
+    "destination": "Destino",
+    "origin": "Origen",
+    "history": "Historial",
+    "milestone": "Hito",
+    "schedule": "Actualmente programado en %s",
+    "delivered": "Entregado el: %s",
+    "customerRequestedDate": "Fecha solicitada por el cliente",
+    "firstConfirmedDeliveryDate": "Primera fecha de entrega confirmada",
+    "lastConfirmedDeliveryDate": "Última fecha de entrega confirmada",
+    "shippingLocation": "Dirección del envío",
+    "AWB": "Códigos de embargo",
+    "lastMilestone": "Último hito",
+    "carrier": "Transportista",
+    "carrierTracking": "Seguimiento de transporte",
+    "buyer": "Comprador",
+    "ucr": "Número de albarán",
+    "showAdditionalDetails": "Mostrar detalles adicionales",
+    "itemNo": "Número de posición",
+    "orderStatus": "Estado del pedido",
+    "salesOrderNumber": "Pedido de ventas Nº",
+    "quantity": "Cantidad",
+    "delieveredHeading": "Entregado el",
+    "customerPurchaseNumber": "Orden de compra del cliente",
+    "MLFB": "Referencia Siemens",
+    "salesOrderNumberShippingLocation": "LIAZ",
+    "deliveryNoteDate": "Fecha de la nota de entrega",
+    "deliveryNoteNo": "Número de nota de entrega",
+    "trackingNo": "El número de rastreo"
+
+  },
+  "DeliveryDocument": {
+    "noDate": "La fecha solicitada no está disponible",
+    "noFCDD": "Primera fecha de entrega confirmada no está disponible",
+    "noLCDD": "Última fecha de entrega confirmada no está disponible",
+    "noShippingLocation": "La dirección de envío no está disponible",
+    "noBuyer": "El comprador no está disponible",
+    "noUCR": "Nº de albarán no está disponible",
+    "noAWB": "Codigos de embargo no disponibles",
+    "noCarrierTracking": "El seguimiento del transporte no está disponible",
+    "noCarrier": "Es transporte no está disponible",
+    "MST_LSTAR": "Entrada de pedido de cliente",
+    "MST_L100": "Pedido aclarado",
+    "MST_L200": "Pedido/Cancelación de pedido",
+    "MST_L210": "Pedido / Pedido Call-Off en la Unidad de Entrega / Obras",
+    "MST_L220": "Entrada de pedidos aclarada en la unidad de entrega / obras",
+    "MST_L230": "Confirmación de pedido/cancelación de pedido",
+    "MST_L240": "Entrega al proceso siguiente",
+    "MST_L290": "Inicio de la entrega",
+    "MST_L300": "Listo para enviar",
+    "MST_L310": "En salida",
+    "MST_L311": "Recibido por el agente de envío / transportista",
+    "MST_L313": "Transferencia al siguiente agente de envío",
+    "MST_L315": "Almacenamiento de recibos por parte del agente de envío principal",
+    "MST_L318": "Eliminación por parte del agente de envío principal",
+    "MST_L320": "Inicio del transporte de carros principales",
+    "MST_L330": "Llegada al aeropuerto de destino / puerto marítimo",
+    "MST_L335": "Provisión para Aduanas de Importación, Consignatario Informado",
+    "MST_L340": "Inicio del despacho aduanero",
+    "MST_L350": "Fin del despacho aduanero",
+    "MST_L360": "Inicio del transporte local",
+    "MST_L380": "Material en el punto de acopio",
+    "MST_L390": "Inicio del transporte local desde el punto de acopio hasta el cliente",
+    "MST_L400": "Material en el punto de destino"
+  },
+  "DialogUtil": {
+    "yesNo": "sí;no",
+    "salesOrder": "Número de pedido de ventas",
+    "purchaseOrder": "Número de orden de compra",
+    "deliveryNote": "Número de albarán",
+    "unknown": "No estoy seguro",
+    "ucr": "Número de albarán",
+    "customerPo": "Orden de compra del cliente"
+  },
+  "Handlers": {
+    "uncaught": "¡Vaya!, algo salió mal..."
+  }
+}

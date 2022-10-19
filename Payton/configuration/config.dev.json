@@ -1,0 +1,14 @@
+{
+  "Alive": true,
+  "HealthChecks_Timeout": "300000",
+  "AssistantCache": {
+    "timeSpan": 60,
+    "type": "raw"
+  },
+  "NLP_Treshold": 0.65,
+  "QnA_Treshold": 0.5,
+  "FrenchAllowed":false,
+  "DeveloperEmail":"shushil.maniyat@siemens.com",
+  "QnA_SimilarityTresholdInPercent": 0.1,
+  "QnA_Top": 2
+}

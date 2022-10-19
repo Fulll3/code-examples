@@ -1,0 +1,12 @@
+{
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 120,
+    "editor.detectIndentation": false,
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#003241",
+      "titleBar.activeBackground": "#00465B",
+      "titleBar.activeForeground": "#F0FCFF"
+    },
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+}

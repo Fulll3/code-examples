@@ -1,0 +1,22 @@
+{
+  "help": [
+    "Help",
+    "Please help me",
+    "I need some help",
+    "Could you help me please?"
+  ],
+  "restart": [
+    "Restart",
+    "Lets restart",
+    "Restart please"
+  ],
+  "bye": [
+    "Bye bye",
+    "Bye",
+    "See you",
+    "Good bye"
+  ],
+  "restartForced": [
+    "return to main menu"
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <query code="HANA_PERSISTANTTABLE" >
+        SELECT TOP 11 DISTINCT
+            DOCUMENTNUMBER as "DocumentNumber",
+	          DOCUMENTDATE as "DocumentDate",
+	          VENDORNUMBER as "VendorNumber",
+	          PONUMBER as "PONumber",
+	          COMPANYCODE as "CompanyCode",
+	          ASSIGNMENT as "Assignment",
+	          POSTINGDATE as "PostingDate",
+	          DOCUMENTTYPE as "DocumentType",
+	          PAYMENTBLOCK_DOCLEVEL as "PaymentBlock_DocLevel",
+	          DOCUMENT_PAYMENTMETHOD as "Document_PaymentMethod",
+	          PAYMENTTERMS as "PaymentTerms",
+	          CLEARINGDATE as "ClearingDate",
+	          CLEARINGDOCUMENT as "ClearingDocument",
+	          DOCUMENTTYPE_CLEAREDDOCUMENT as "DocumentType_ClearedDocument",
+	          NAME1 as "Name1",
+	          REGION as "Region",
+	          INVOICENUMBER as "InvoiceNumber",
+	          BASELINEPAYMENTDTE as "BaselinePaymentDte",
+	          VENDOR_PAYMENTMETHOD as "Vendor_PaymentMethod",
+	          PAYMENTBLOCK_VENDORLEVEL as "PaymentBlock_VendorLevel",
+	          LOCALAMOUNT as "LocalAmount",
+	          DOCUMENTAMOUNT as "DocumentAmount",
+	          DOCUMENTCURRENCY as "DocumentCurrency",
+	          PBPRICE as "PBPrice",
+	          PBDATE as "PBDate",
+	          PBAMOUNT as "PBAmount",
+	          PBQUALITY as "PBQuality",
+	          PBQUANTITY as "PBQuantity",
+	          NETDUEDATE as "NetDueDate",
+	          POSTINGKEY as "PostingKey",
+	          SYSTEM as "System"   
+        FROM "PS_BOTANICA"."siemens.BOTANICA.Botanica.model::T_CHATBOT_PERSISTENT_GBS"
+    </query>
+</root>

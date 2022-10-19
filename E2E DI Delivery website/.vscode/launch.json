@@ -1,0 +1,190 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:FileAssetsBucketEncryptionKey",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "FileAssetsBucketEncryptionKey"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:FileAssetsBucketEncryptionKeyAlias",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "FileAssetsBucketEncryptionKeyAlias"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:StagingBucket",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "StagingBucket"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:StagingBucketPolicy",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "StagingBucketPolicy"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:ContainerAssetsRepository",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "ContainerAssetsRepository"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:FilePublishingRole",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "FilePublishingRole"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:ImagePublishingRole",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "ImagePublishingRole"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:LookupRole",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "LookupRole"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:FilePublishingRoleDefaultPolicy",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "FilePublishingRoleDefaultPolicy"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:ImagePublishingRoleDefaultPolicy",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "ImagePublishingRoleDefaultPolicy"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:DeploymentActionRole",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "DeploymentActionRole"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:CloudFormationExecutionRole",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "CloudFormationExecutionRole"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "bootstrap:CdkBootstrapVersion",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/node_modules/aws-cdk/lib/api/bootstrap/bootstrap-template.yaml",
+                "logicalId": "CdkBootstrapVersion"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}

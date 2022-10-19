@@ -1,0 +1,241 @@
+{
+    "__conversationIndex": "mapping definition",
+    "__comment": "answers contains key values from localization file ./locale/en/index.json",
+    "1.1.2.1": {
+        "answer1": "invoiceStatusAnswer1_Awaiting Payment",
+        "answer2": "invoiceStatusAnswer2_Awaiting Payment",
+        "params1": [
+            {
+                "type": "paymentTerms",
+                "value": "PaymentTerms"
+            },
+            {
+                "type": "date",
+                "value": "NetDueDate",
+                "inputFormat": "YYYYMMDD",
+                "outputFormat": "MM/DD/YYYY"
+            }
+        ]
+    },
+    "1.2.1.3": {
+        "__comment": "Prepared for EZ Suite integration",
+        "answer1": "",
+        "answer2": ""
+    },
+    "1.1.2.2": {
+        "answer1": "invoiceStatusAnswer1_Blocked for quality review",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.1": {
+        "answer1": "invoiceStatusAnswer1_Blocked for PO date discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.2": {
+        "answer1": "invoiceStatusAnswer1_Blocked for PO discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.3": {
+        "answer1": "invoiceStatusAnswer1_Blocked for PO price discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_issue"
+    },
+    "1.1.2.2.4": {
+        "answer1": "invoiceStatusAnswer1_Blocked for PO quantity/Goods receipts discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_issue"
+    },
+    "1.1.1.2": {
+        "answer1": "invoiceStatusAnswer1_Cancelled",
+        "answerAfterTicket": "invoiceStatusAnswer2_Cancelled"
+    },
+    "1.1.1.1.2.5": {
+      "answer1": "invoiceStatusAnswer1_Paid - Clearing Number equals Check Number",
+      "params1": [
+          {
+              "type": "date",
+              "value": "ClearingDate",
+              "inputFormat": "YYYYMMDD",
+              "outputFormat": "MM/DD/YYYY"
+          },
+          {
+              "type": "simple",
+              "value": "ClearingDocument"
+          }
+      ]
+  },
+    "1.1.1.1.2.4": {
+      "answer1": "invoiceStatusAnswer1_Paid - Check payment Number Available",
+      "params1": [
+          {
+              "type": "date",
+              "value": "ClearingDate",
+              "inputFormat": "YYYYMMDD",
+              "outputFormat": "MM/DD/YYYY"
+          },
+          {
+              "type": "simple",
+              "value": "ClearingDocument"
+          },
+          {
+            "type": "checkNumber",
+            "value": "CheckNumber"
+          }
+      ]
+  },
+    "1.1.1.1.2.2": {
+        "answer1": "invoiceStatusAnswer1_Paid - Check payment",
+        "params1": [
+            {
+                "type": "date",
+                "value": "ClearingDate",
+                "inputFormat": "YYYYMMDD",
+                "outputFormat": "MM/DD/YYYY"
+            },
+            {
+                "type": "simple",
+                "value": "ClearingDocument"
+            }
+        ]
+    },
+    "1.1.1.1.2.1": {
+        "answer1": "invoiceStatusAnswer1_Paid - EFT payment",
+        "answer2": "invoiceStatusAnswer2_Paid - EFT payment",
+        "params1": [
+            {
+                "type": "date",
+                "value": "ClearingDate",
+                "inputFormat": "YYYYMMDD",
+                "outputFormat": "MM/DD/YYYY"
+            },
+            {
+                "type": "simple",
+                "value": "ClearingDocument"
+            }
+        ]
+    },
+    "1.1.1.1.2.3": {
+        "answer1": "invoiceStatusAnswer1_Paid - ORBIAN"
+    },
+    "1.1.2.2.5": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8 and PO blocked for Price discrepancy",
+        "answer2": "invoiceStatusAnswer2_Payment held awaiting IRS W9 or W8 and PO blocked for Price discrepancy"
+    },
+    "1.1.2.2.6": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8",
+        "answer2": "invoiceStatusAnswer2_Payment held awaiting IRS W9 or W8"
+    },
+    "1.1.2.2.7": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8 and blocked for PO discrepancy",
+        "answer2": "invoiceStatusAnswer2_Payment held awaiting IRS W9 or W8 and blocked for PO discrepancy"
+    },
+    "1.1.2.2.8": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy",
+        "answer2": "invoiceStatusAnswer2_Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy"
+    },
+    "1.1.2.2.9": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8 and payment held due to Management direction",
+        "answer2": "invoiceStatusAnswer2_Payment held awaiting IRS W9 or W8 and payment held due to Management direction"
+    },
+    "1.1.2.2.10": {
+        "answer1": "invoiceStatusAnswer1_Payment held due to Management direction",
+        "answer2": "invoiceStatusAnswer2_Payment held due to Management direction"
+    },
+    "1.1.2.2.11": {
+        "answer1": "invoiceStatusAnswer1_Payment held due to Management direction and Blocked for PO discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.12": {
+        "answer1": "invoiceStatusAnswer1_Payment held due to Management direction and Blocked for PO price discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.13": {
+        "answer1": "invoiceStatusAnswer1_Payment held due to Management direction and Blocked for PO Quantity/Goods receipts discrepancy",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.14": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy(date)",
+        "answer2": "invoiceStatusAnswer2_Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy(date)"
+    },
+    "1.1.2.2.15": {
+        "answer1": "invoiceStatusAnswer1_Payment held awaiting IRS W9 or W8 and blocked for PO quantity/ Goods receipts discrepancy(management)",
+        "answer2": "invoiceStatusAnswer_contactSiemensRepresentative_questions"
+    },
+    "1.1.2.2.16":{
+        "answer1": "invoiceStatusAnswer1_Payment held due to Check being stale",
+        "answerAfterTicket": "invoiceStatusAnswer2_Payment held due to Check being stale"
+    },
+    "__comment2": "--------------------EZ SUITE answers contains key values from localization file ./locale/en/index.json",
+    "EZ1.1.1": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Missing/Invalid contact name"
+    },
+    "EZ1.1.2": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Incorrect Bill to/ Legal Name"
+    },
+    "EZ1.1.3": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Credit Balance/0$ Do not pay"
+    },
+    "EZ1.1.4": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Invoice contains disallowed charges- Finance/Late/Service/Freight"
+    },
+    "EZ1.1.5": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Credit memo offset the Original invoice"
+    },
+    "EZ1.1.6": {
+        "answer1": "invoiceStatusAnswer1_Rejected_ICC invoice"
+    },
+    "EZ1.1.7": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Missing/Invalid PO number"
+    },
+    "EZ1.1.8": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Remit to information missing"
+    },
+    "EZ1.1.9": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Multiple PO number"
+    },
+    "EZ1.1.10": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Duplicate invoice"
+    },
+    "EZ1.1.11": {
+        "answer1": "invoiceStatusAnswer1_Rejected_PO cancelled/ Closed"
+    },
+    "EZ1.1.12": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Invalid invoice-Vendor to resubmit"
+    },
+    "EZ1.1.13": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Amount wrong"
+    },
+    "EZ1.1.14": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Paid with credit card"
+    },
+    "EZ1.1.15": {
+        "answer1": "invoiceStatusAnswer1_Rejected_E-invoicing vendor"
+    },
+    "EZ1.1.16": {
+        "answer1": "invoiceStatusAnswer1_Rejected",
+        "params1": [
+            {
+                "type": "simple",
+                "value": "invoice_reason"
+            }
+        ]
+    },
+    "EZ1.1.17": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Rescan-multiple invoices/pages"
+    },
+    "EZ1.1.18": {
+        "answer1": "invoiceStatusAnswer1_Rejected_Freight Vendor"
+    },
+    "EZ1.1.19": {
+      "answer1": "invoiceStatusAnswer1_Rejected_Autorejected"
+    },
+    "EZ1.2": {
+        "answer1": "invoiceStatusAnswer1_Routed to Contact name for Approval_other",
+        "answer2": "invoiceStatusAnswer2_Routed to Contact name for Approval_other"
+    },
+    "EZ1.3": {
+        "answer1": "invoiceStatusAnswer1_Routed to Contact name due to discrepancy",
+        "answer2": "invoiceStatusAnswer2_Routed to Contact name due to discrepancy"
+    },
+    "EZ1.4": {
+        "answer1": "invoiceStatusAnswer1_Awaiting processing in Accounts payable",
+        "answer2": "invoiceStatusAnswer2_Awaiting processing in Accounts payable"
+    }    
+}

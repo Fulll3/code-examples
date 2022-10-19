@@ -1,0 +1,112 @@
+[{
+  "title": "IPA Schedule Daily",
+  "properties": [
+      {
+          "key": "Robot name",
+          "value": "robot1"
+      },
+      {
+          "key": "Schedule Name",
+          "value": "schedule name A"
+      },
+      {
+        "key": "Retired",
+        "value": "No"
+    },
+    {
+        "key": "Frequency",
+        "value": "daily"
+    },
+      {
+          "key": "Calendar name",
+          "value": "calendar Name A"
+      },
+      {
+          "key": "Start time",
+          "value": "Stop after time"
+      },
+      {
+          "key": "08:00 CET",
+          "value": "09:00 CET"
+      }
+  ]
+},
+{
+  "title": "IPA Schedule Hourly",
+  "properties": [
+      {
+          "key": "Robot name",
+          "value": "Robot B"
+      },
+      {
+          "key": "Schedule Name",
+          "value": "schedule B"
+      },
+      {
+        "key": "Retired",
+        "value": "No"
+    },
+      {
+          "key": "Frequency",
+          "value": "hourly"
+      },
+      {
+          "key": "Calendar name",
+          "value": "calendar B"
+      },
+      {
+          "key": "Start time",
+          "value": "Stop after time"
+      },
+      {
+          "key": "08:00 CET",
+          "value": "09:00 CET"
+      },
+      {
+          "key": "11:00 CET",
+          "value": "12:00 CET"
+      }
+      ,
+      {
+          "key": "15:00 CET",
+          "value": "16:00 CET"
+      }
+  ]
+},
+{
+  "title": "IPA Schedule minutely",
+  "properties": [
+      {
+          "key": "Robot name",
+          "value": "Robot B"
+      },
+      {
+          "key": "Schedule Name",
+          "value": "schedule B"
+      },
+      {
+        "key": "Retired",
+        "value": "No"
+    },
+      {
+          "key": "Frequency",
+          "value": "hourly"
+      },
+      {
+          "key": "Calendar name",
+          "value": "calendar B"
+      },
+      {
+          "key": "Start time",
+          "value": "Stop after time"
+      },
+      {
+          "key": "08:10 CET",
+          "value": "08:20 CET"
+      },
+      {
+          "key": "08:40 CET",
+          "value": "08:50 CET"
+      }
+  ]
+}]

@@ -1,0 +1,23 @@
+fieldName,environment,fieldType,fieldData
+Type,local,SYSTEM,"question"
+CcCollaboratorIds,local,SYSTEM,365521166974
+Subject,local,SYSTEM,"Payton invoice query"
+Priority,local,SYSTEM,"normal"
+Tags,local,SYSTEM,["Payton_Testing"]
+SiemensAffectedAccount,local,360010283433,%SOC%
+AffectedAccount_VendorID,local,360010389374,%VENDORID%
+CommunicationChannel,local,360010389394,"chat"
+OperationalCategorization1,local,360010316493,"3rd_party_edi_invoice"
+Type,prd,SYSTEM,"question"
+Subject,prd,SYSTEM,"Payton invoice query"
+Priority,prd,SYSTEM,"normal"
+SocCode,prd,360007294274,%SOC%
+CommunicationChannel,prd,360007294254,"chat"
+Tickettype,prd,360007217493,"inquiry"
+Type,dev,SYSTEM,"question"
+Subject,dev,SYSTEM,"Payton invoice query"
+Priority,dev,SYSTEM,"normal"
+Tags,dev,SYSTEM,["Payton_Testing"]
+SocCode,dev,360007294274,%SOC%
+CommunicationChannel,dev,360007294254,"chat"
+Tickettype,dev,360007217493,"inquiry"

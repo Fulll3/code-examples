@@ -1,0 +1,52 @@
+{
+    "Records": [
+        {
+            "cf": {
+                "config": {
+                    "distributionDomainName": "d2gdqrfx4uxg1t.cloudfront.net",
+                    "distributionId": "EWAXSFX7FU8ZO",
+                    "eventType": "viewer-request",
+                    "requestId": "neD-JDLWer0A9K2cN3PHtgMwDF0DmNO6jrWVA5fKpgkcjz2KSI0ksA=="
+                },
+                "request": {
+                    "clientIp": "91.240.118.167",
+                    "headers": {
+                        "host": [
+                            {
+                                "key": "Host",
+                                "value": "lotta.siemens.com"
+                            }
+                        ],
+                        "user-agent": [
+                            {
+                                "key": "User-Agent",
+                                "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36"
+                            }
+                        ],
+                        "accept": [
+                            {
+                                "key": "Accept",
+                                "value": "*/*"
+                            }
+                        ],
+                        "accept-language": [
+                            {
+                                "key": "Accept-Language",
+                                "value": "en"
+                            }
+                        ],
+                        "accept-encoding": [
+                            {
+                                "key": "Accept-Encoding",
+                                "value": "gzip"
+                            }
+                        ]
+                    },
+                    "method": "GET",
+                    "querystring": "",
+                    "uri": "/iNotes/Forms6.nsf"
+                }
+            }
+        }
+    ]
+}

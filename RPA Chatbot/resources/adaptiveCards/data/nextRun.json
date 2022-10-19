@@ -1,0 +1,29 @@
+[{
+  "title": "IPA Schedule A",
+  "properties": [
+      {
+          "key": "Robot name",
+          "value": "robot1"
+      },
+      {
+          "key": "Schedule Name",
+          "value": "schedule name A"
+      },
+      {
+          "key": "Start Date",
+          "value": "1.1.2021"
+      },
+      {
+          "key": "End Date",
+          "value": "2.2.2021"
+      },
+      {
+          "key": "Frequency",
+          "value": "daily"
+      },
+      {
+          "key": "Calendar name",
+          "value": "calendar Name A"
+      }
+  ]
+}]

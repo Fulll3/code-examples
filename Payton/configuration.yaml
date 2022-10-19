@@ -1,0 +1,34 @@
+name: Payton
+description: Describe what your bot x does
+channels:
+  - webchat
+logging:
+  users:
+    - Z0002A2W
+    - Z0030K7Z
+    - Z003TH0X
+    - Z003M43E
+    - Z002PJ1H
+    - Z003P9FM
+    - Z002ZT1S
+    - Z001TSPU
+    - Z002SFVB
+    - Z00074NV
+    - Z0000O9V
+    - Z002C86A
+    - Z001PP0Y
+    - Z003CHFR
+    - Z002XW5B
+    - Z00429MB
+    - Z003T17A
+    - Z003P2XT
+    - Z003W49C
+    - Z0046NCX
+alerting:
+  description: Payton Healthcheck alert
+  query: >
+   traces
+   | where message has "Healtcheck for" and message has "has failed"
+  timeWindow: 15
+  actions: 
+    - /subscriptions/4130508c-d14f-4522-872e-3f6cd9f33e17/resourceGroups/alerts_sending_email/providers/microsoft.insights/actiongroups/action_email_alert

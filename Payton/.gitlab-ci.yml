@@ -1,0 +1,64 @@
+stages:
+  - test
+  - deploy
+
+test:api:
+  image: node:$NODEJS_CI_VERSION
+  stage: test
+  script:
+    - npm install
+    - npm run build
+    - npm run ci-test
+  tags:
+    - BOT
+  
+test:api:vuln:
+  image: node:$NODEJS_CI_VERSION
+  stage: test
+  script:
+    - npm audit
+  allow_failure: true
+  tags:
+    - BOT
+
+deploy:api:dev:
+  stage: deploy
+  image: node:$NODEJS_CI_VERSION
+  before_script:
+    - apt update && apt install git
+  script:
+    - mkdir -p /tmp/build
+    - cp -ar `ls -A | grep -vw ".git"` /tmp/build
+    - cd /tmp/build
+    - "sed -i s*dist/*src/*g .gitignore"
+    - git config --global user.email "bot.botanica.it@siemens.com"
+    - git config --global user.name "Botanica Bot"
+    - git init
+    - git add .
+    - git commit -m "commit ${CI_COMMIT_REF_SLUG}"
+    - git push -f https://${CI_PROJECT_ID}-${CI_JOB_ID}:${CI_JOB_TOKEN}@deploy.botanica.siemens.cloud/${CI_PROJECT_NAME} master:dev
+  only:
+    - dev
+  tags:
+    - BOT
+  
+deploy:api:prod:
+  stage: deploy
+  image: node:$NODEJS_CI_VERSION
+  before_script:
+    - apt update && apt install git
+  script:
+    - mkdir -p /tmp/build
+    - cp -ar `ls -A | grep -vw ".git"` /tmp/build
+    - cd /tmp/build
+    - "sed -i s*dist/*src/*g .gitignore"
+    - git config --global user.email "bot.botanica.it@siemens.com"
+    - git config --global user.name "Botanica Bot"
+    - git init
+    - git add .
+    - git commit -m "commit ${CI_COMMIT_REF_SLUG}"
+    - git push -f https://${CI_PROJECT_ID}-${CI_JOB_ID}:${CI_JOB_TOKEN}@deploy.botanica.siemens.cloud/${CI_PROJECT_NAME} master
+  only:
+    - master
+  tags:
+    - BOT

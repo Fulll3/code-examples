@@ -1,0 +1,169 @@
+{
+	"MainDialog": {
+    "goodbye": "Tot ziens"
+	},
+	"WelcomeDialog": {
+    "prodWelcomeUser": "Hallo, ik ben Lotta, uw persoonlijke logistieke order track & trace assistent. De gegevens worden verstrekt door [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \n Voer uw referentienummer in voor uw actuele bestelstatus.",
+    "devWelcomeUser": "Dit is uw [%s] Order Status & Shipment Chatbot, een service die wordt geleverd door de [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \nIk kan u de huidige status van uw \"Verkooporder\" of \"Levering\" geven"
+    },
+	"HelpDialog": {
+		"generalHelp": "I can only answer to queries based on 'Sales Order Number', 'Purchase Order Number', 'Delivery Note Number' or 'UCR Number'."
+	},
+	"GatherReferenceNumberDialog": {
+    "promptUserForReferenceNumberFirstTime": "Voer het Siemens-referentienummer in.",
+    "promptUserForReferenceNumber": "Voer een Siemens-referentienummer in als u een status wilt ontvangen voor een andere bestelling, "
+     },
+	"ChoiceDialog": {
+    "promptUserForDocumentType": "Selecteer het documenttype als u de leveringsstatus wilt controleren."
+	},
+	"DeliveryStatusDialogHelper": {
+
+    "noResultsFound": "Ik heb geen resultaten kunnen vinden.",
+    "informMultipleCountries": "Ik heb meer dan één resultaat gevonden. Selecteer het land waar de bestelling is verwerkt.",
+    "confirmUserSearch": "Ik ben op zoek naar statusinformatie over %s \"%s\"."
+    },
+	"DeliveryStatusDialog": {
+    "resultsDelayMessage": "Onze excuses, het duurt langer dan normaal om deze informatie op te halen",
+    "keepWaitingMessage": "Wil je blijven wachten?",
+    "technicalIssuesMessage": "Het spijt me, maar vanwege technische problemen kan ik het gevraagde document niet vinden. Probeer het later opnieuw."
+    },
+	"SingleGroupDialogHelper": {
+	  "promptToCheckShipment": "Ik heb de volgende zending gevonden.",
+  "displayResultsMessage": "Ik heb %s zendingen gevonden.",
+  "informTooManyResults": "Ik heb meer dan %s items gevonden.",
+  "multipleSalesOrders": "Uw klantinkooporder bevat meerdere verkooporders. Selecteer welke u wilt zien."
+	},
+	"MultipleGroupsDialogHelper": {
+    "askUserToPickCountry": "Ik heb meer dan één resultaat gevonden. Selecteer het land waar de bestelling is verwerkt.",
+    "noResults": "Ik kon geen zendingen vinden voor het gekozen land"
+    },
+	"ItemSearchDialogHelper": {
+    "noResultForDeliveryNote": "Geen resultaten gevonden voor het opgegeven artikelnummer van de leveringsbon.",
+    "noResultForPurchaseOrder": "Geen resultaten gevonden voor het opgegeven artikel van de inkooporder.",
+    "noResultForSalesOrder": "Geen resultaten gevonden voor het opgegeven artikelnummer van de verkooporder.",
+    "promptToEnterDeliveryNoteItem": "Voer het item van de leveringsbon in.",
+    "retryPromptToEnterDeliveryNoteItem": "Voer het geldige item nummer van de leveringsbon in.",
+    "promptToEnterPurchaseOrderItem": "Voer het inkooporderitem in.",
+    "retryPromptToEnterPurchaseOrderItem": "Voer het geldige item nummer van de inkooporder in.",
+    "promptToEnterSalesOrderItem": "Voer het verkooporderitem in.",
+    "retryPromptToEnterSalesOrderItem": "Voer het geldige item nummer van de verkooporder in.",
+    "promptToEnterUCRItem": "Voer het UCR item nummer in.",
+    "retryPromptToEnterUCRItem": "Voer het geldige UCR item nummer in.",
+    "nextPage": "Volgende pagina",
+    "previousPage": "Vorige pagina",
+    "orderItems": "Artikelen bestellen",
+    "anotherItem": "Wilt u een ander item zien?",
+    "seeDetailsInstructions": "Om het detail van een positie te krijgen, gelieve op het positienummer te klikken",
+		"backToOverviewTable": "Overzicht opnieuw weergeven",
+		"specificItemNumber": "Geef een positienummer in",
+		"newConversation": "Nieuwe aanvraag beginnen",
+		"salesOrderSelection": "Selecteer de verkooporder waartoe dit artikel behoort."
+	},
+	"DocumentTypeDialog": {
+    "promptUserForDocumentType": "Selecteer het documenttype",
+    "promptUserInvalidDocumentType": "[%s]: Ik kan dit documenttype niet herkennen."
+     },
+	"RestartDialog": {
+    "askForConfirmation": "Wilt u ons gesprek echt opnieuw beginnen?",
+    "userConfirmed": "Oke!",
+    "userRejected": "Laten we doorgaan ...",
+    "promptUserForDocumentType": "U hebt het gesprek opnieuw gestart. Om uw actuele bestelstatus te bekijken, selecteert u het documenttype"
+    },
+	"FeedbackDialog": {
+    "promptFeedback": "Beoordeel uw ervaring",
+    "promptUserForDocumentType": "Kan ik u ergens anders mee helpen?",
+    "confirmChoices": "ja;nee",
+    "customFeedbackPrompt": "Bedankt. Het zou geweldig zijn als u feedback kunt achterlaten voor verdere verbetering?",
+    "CustomFeedbackText": "Laat me alstublieft weten wat u ervan vindt.",
+    "Thanks": "Ik wens u een prachtige dag! Met vriendelijke groet, Lotta",
+    "deliveryDocumentsPrompttext": "Selecteer het documenttype om andere levering te controleren"
+      },
+	"MaintenanceMiddleware": {
+    "maintenance": "Excuses. Helaas kan ik uw vragen niet beantwoorden omdat ik momenteel technische problemen ondervind. Probeer het later opnieuw.",
+    "hanaErrorMessage": "BELANGRIJK: We ondervinden momenteel problemen met de verbinding met de HANA-database. Als uw verzoek niet wordt beantwoord, probeer het dan later. Onze excuses voor het ongemak"
+    },
+	"AdaptiveCards": {
+	  "orderFulfilled": "bestelling vervuld",
+  "goodsIssued": "Problemen met goederen op verzendlocatie",
+  "instructionSent": "transportinstructie verzonden",
+  "onWay": "op weg naar de bestemming",
+  "default": "uw bestelling wordt verwerkt",
+  "noMilestones": "Ik heb geen mijlpalen kunnen vinden.",
+  "destination": "Bestemming",
+  "origin": "Oorsprong",
+  "history": "Geschiedenis",
+  "milestone": "Mijlpaal",
+  "schedule": "Momenteel gepland op %s",
+  "delivered": "Geleverd op: %s",
+  "customerRequestedDate": "Door de klant gevraagde datum",
+  "firstConfirmedDeliveryDate": "Eerste bevestigde leveringsdatum",
+  "lastConfirmedDeliveryDate": "Laatst bevestigde leverdatum",
+  "shippingLocation": "Verzendlocatie",
+  "AWB": "AWB",
+  "lastMilestone": "Laatste mijlpaal",
+  "carrier": "Vervoerder",
+  "carrierTracking": "Vervoerder volgen",
+  "buyer": "Koper",
+  "ucr": "UCR",
+  "showAdditionalDetails": "Toon aanvullende details",
+  "itemNo": "Artikelnr.",
+  "orderStatus": "Bestelstatus",
+  "salesOrderNumber": "Verkooporder nr.",
+  "quantity": "Aantal",
+  "delieveredHeading": "Geleverd op",
+  "customerPurchaseNumber": "Inkooporder van de klant",
+  "MLFB": "MLFB",
+  "salesOrderNumberShippingLocation": "LIAZ",
+  "deliveryNoteDate": "Datum leveringsbon",
+  "deliveryNoteNo": "Afleverbonnummer",
+  "trackingNo": "Volg nummer"
+ 
+	},
+	"DeliveryDocument": {
+    "noDate": "Gevraagde datum is niet beschikbaar",
+    "noFCDD": "FCDD is niet beschikbaar",
+    "noLCDD": "LCDD is niet beschikbaar",
+    "noShippingLocation": "Verzendlocatie is niet beschikbaar",
+    "noBuyer": "Koper is niet beschikbaar",
+    "noUCR": "UCR is niet beschikbaar",
+    "noAWB": "AWB is niet beschikbaar",
+    "noCarrierTracking": "Vervoerder volgen is niet beschikbaar",
+    "noCarrier": "Vervoerder is niet beschikbaar",
+    "MST_LSTAR": "Orderinvoer klant",
+    "MST_L100": "Orderinvoer verduidelijkt",
+    "MST_L200": "Bestelling/Bestelling Call-Off",
+    "MST_L210": "Bestelling/Bestelling Call-Off bij Delivering Unit/Works",
+    "MST_L220": "Orderinvoer verduidelijkt bij Delivering Unit/Works",
+    "MST_L230": "Order/Order Call-Off Bevestiging",
+    "MST_L240": "Overdracht aan het volgende proces",
+    "MST_L290": "Initiatie van levering",
+    "MST_L300": "Klaar voor verzending",
+    "MST_L310": "Ex ramp",
+    "MST_L311": "Ontvangst door expediteur / vervoerder",
+    "MST_L313": "Overdracht naar volgende expediteur",
+    "MST_L315": "Ontvangstopslag door hoofdexpediteur",
+    "MST_L318": "Afhaling door hoofdexpediteur",
+    "MST_L320": "Start van het hoofdvervoer",
+    "MST_L330": "Aankomst op Destination Airport / Seaport",
+    "MST_L335": "Voorziening voor invoerdouane, geadresseerde geïnformeerd",
+    "MST_L340": "Start van de douane-inklaring",
+    "MST_L350": "Einde van de douane-inklaring",
+    "MST_L360": "Start van lokaal transport",
+    "MST_L380": "Materiaal bij consolidatiepunt",
+    "MST_L390": "Start van lokaal transport van consolidatiepunt naar de klant",
+    "MST_L400": "Materiaal op de plaats van bestemming"
+	},
+	"DialogUtil": {
+
+    "yesNo": "ja;nee",
+    "salesOrder": "Verkoopordernummer",
+    "purchaseOrder": "Inkoopordernummer",
+    "deliveryNote": "Afleverbonnummer",
+    "unknown": "Ik weet het niet zeker",
+    "ucr": "UCR-nummer",
+    "customerPo": "Inkooporder klant"
+	},
+	"Handlers": {
+    "uncaught": "Oeps!, er ging iets mis..."
+	}
+}

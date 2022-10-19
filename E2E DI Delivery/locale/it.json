@@ -1,0 +1,166 @@
+{
+  "MainDialog": {
+    "goodbye": "Arrivederci"
+  },
+  "WelcomeDialog": {
+    "prodWelcomeUser": "Ciao, sono Lotta, il tuo assistente personale per il tracciamento degli ordini. I dati saranno forniti da [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \n Inserire  il numero di riferimento per conoscere lo stato effettivo dell'ordine.",
+    "devWelcomeUser": "Questo è il tuo [%s] Chatbot Order Status & Shipment , un servizio fornito da [\"E2E Deliver Monitor\"](https://siemens.sharepoint.com/teams/Siemens-Data-AI-Services/SitePages/E2E-Deliver-Monitor.aspx). \n Posso fornire lo stato corrente del tuo \"Ordine cliente\" o lo \"Stato di Consegna\""
+  },
+  "HelpDialog": {
+    "generalHelp": "Posso rispondere solo alle domande basate su \"Numero ordine di vendita\", \"Numero ordine di acquisto\", \"Numero di bolla di consegna\" o \"Numero UCR\"."
+  },
+  "GatherReferenceNumberDialog": {
+    "promptUserForReferenceNumberFirstTime": "Inserire il numero di riferimento Siemens ",
+    "promptUserForReferenceNumber": "Se si desidera ottenere lo stato di un altro ordine, inserire un numero di riferimento Siemens"
+  },
+  "ChoiceDialog": {
+    "promptUserForDocumentType": "Selezionare il tipo di documento se si desidera controllare lo stato della consegna."
+  },
+  "DeliveryStatusDialogHelper": {
+    "noResultsFound": "Non sono riuscito a trovare alcun risultato",
+    "informMultipleCountries": "Ho trovato più di un risultato. Seleziona la nazione in cui viene elaborato l'ordine.",
+    "confirmUserSearch": "Sto cercando informazioni sullo stato per %s \"%s."
+  },
+  "DeliveryStatusDialog": {
+    "resultsDelayMessage": "Ci scusiamo per l'attesa. La ricerca delle informazioni sta impiegando più tempo del previsto",
+    "keepWaitingMessage": "Vuoi continuare ad aspettare?",
+    "technicalIssuesMessage": "Mi dispiace ma a causa di problemi tecnici non riesco a trovare il documento richiesto. Si prega di riprovare più tardi"
+  },
+  "SingleGroupDialogHelper": {
+    "promptToCheckShipment": "Ho trovato la seguente spedizione.",
+    "displayResultsMessage": "Ho trovato %s spedizioni.",
+    "informTooManyResults": "Ho trovato più di %s articoli.",
+    "multipleSalesOrders": "L'ordine di acquisto contiene più ordini cliente. Seleziona quello che desideri visualizzare"
+  },
+  "MultipleGroupsDialogHelper": {
+    "askUserToPickCountry": "I have found more than one result. Please select the country were the order is processed.",
+    "noResults": "I wasn't able to find any shipments for chosen country."
+  },
+  "ItemSearchDialogHelper": {
+    "noResultForDeliveryNote": "Nessun risultato trovato per il numero di bolla di consegna inserito.",
+    "noResultForPurchaseOrder": "Nessun risultato trovato per l'ordine di acquisto inserito.",
+    "noResultForSalesOrder": "Nessun risultato trovato per il numero d'ordine di vendita inserito.",
+    "promptToEnterDeliveryNoteItem": "Inserisci il numero di bolla di consegna",
+    "retryPromptToEnterDeliveryNoteItem": "Inserisci il numero dell'articolo della bolla di consegna valido.",
+    "promptToEnterPurchaseOrderItem": "Inserisci l'articolo dell'ordine di acquisto.",
+    "retryPromptToEnterPurchaseOrderItem": "Inserisci il numero dell'oggetto dell'ordine di acquisto valido.",
+    "promptToEnterSalesOrderItem": "Inserisci il numero d'ordine cliente.",
+    "retryPromptToEnterSalesOrderItem": "Inserisci il numero dell'articolo dell'ordine cliente valido.",
+    "promptToEnterUCRItem": "Inserisci il numero dell'oggetto UCR.",
+    "retryPromptToEnterUCRItem": "Inserisci un numero di oggetto UCR valido.",
+    "nextPage": "Pagina successiva",
+    "previousPage": "Pagina precedente",
+    "orderItems": "Articoli dell'ordine",
+    "anotherItem": "Vuoi vedere un altro articolo?",
+    "seeDetailsInstructions": "Per vedere i dettagli di un articolo è possibile fare clic sul numero d'ordine dell'articolo desiderato.",
+    "specificItemNumber": "Digita un numero di articolo specifico",
+    "newConversation": "Inizia una nuova conversazione",
+    "salesOrderSelection": "Seleziona l'ordine di vendita a cui appartiene questo articolo",
+    "backToOverviewTable": "Mostrami di nuovo la tabella riepilogativa"
+  },
+  "DocumentTypeDialog": {
+    "promptUserForDocumentType": "Selezionare il tipo di documento",
+    "promptUserInvalidDocumentType": "[%s]: Non sono in grado di riconoscere questo tipo di documento."
+  },
+  "RestartDialog": {
+    "askForConfirmation": "Vuoi davvero riavviare la conversazione?",
+    "userConfirmed": "Ok!",
+    "userRejected": "Continuiamo...",
+    "promptUserForDocumentType": "La conversazione è stata riavviata correttamente. Per visualizzare lo stato effettivo dell'ordine, selezionare il tipo di documento"
+  },
+  "FeedbackDialog": {
+    "promptFeedback": "Valuta la tua esperienza",
+    "promptUserForDocumentType": "Posso aiutarti con qualcos'altro?",
+    "confirmChoices": "Sì;no",
+    "customFeedbackPrompt": "Grazie. Ti andrebbe di lasciare un feedback per ulteriori miglioramenti?",
+    "CustomFeedbackText": "Per favore fatemi sapere cosa ne pensi.",
+    "Thanks": "Vi auguro una splendida giornata! Il tuo, Lotta",
+    "deliveryDocumentsPrompttext": "Per controllare altre consegne, selezionare il tipo di documento"
+  },
+  "MaintenanceMiddleware": {
+    "maintenance": "Mi dispiace. Purtroppo non sono in grado di rispondere alle vostre domande in quanto attualmente sto riscontrando problemi tecnici. Riprova più tardi.",
+    "hanaErrorMessage": "IMPORTANTE: attualmente si sono verificati dei problemi con la connessione al database HANA. Se la tua richiesta non riceve risposta, prova più tardi. Ci scusiamo per il disagio"
+  },
+  "AdaptiveCards": {
+    "orderFulfilled": "ordine evaso",
+    "goodsIssued": "Problemi relativi alle merci nel luogo di spedizione",
+    "instructionSent": "istruzioni di trasporto trasmesse",
+    "onWay": "In fase di consegna",
+    "default": "il tuo ordine è in fase di elaborazione",
+    "noMilestones": "Non sono stato in grado di trovare alcun milestone.",
+    "destination": "Destinazione",
+    "origin": "Origine",
+    "history": "Cronologia",
+    "milestone": "Milestone",
+    "schedule": "Attualmente programmato su %s",
+    "delivered": "Consegnato il: %s",
+    "customerRequestedDate": "Data richiesta dal cliente",
+    "firstConfirmedDeliveryDate": "Prima data di consegna confermata",
+    "lastConfirmedDeliveryDate": "Ultima data di consegna confermata",
+    "shippingLocation": "Luogo di spedizione",
+    "AWB": "AWB",
+    "lastMilestone": "Ultima milestone",
+    "carrier": "Trasportatore",
+    "carrierTracking": "Tracking corriere",
+    "buyer": "Acquisitore",
+    "ucr": "UCR",
+    "showAdditionalDetails": "Mostra dettagli aggiuntivi",
+    "itemNo": "Articolo n.",
+    "orderStatus": "Stato dell'ordine",
+    "salesOrderNumber": "Ordine di vendita Nr.",
+    "quantity": "Quantità",
+    "delieveredHeading": "Consegnato il",
+    "customerPurchaseNumber": "Ordine di acquisto del cliente",
+    "MLFB": "MLFB",
+    "salesOrderNumberShippingLocation": "LIAZ",
+    "deliveryNoteDate": "Data della bolla di consegna",
+    "deliveryNoteNo": "Numero della bolla di consegna",
+    "trackingNo": "Numero di identificazione"
+  },
+  "DeliveryDocument": {
+    "noDate": "La data richiesta non è disponibile",
+    "noFCDD": "FCDD non disponibile",
+    "noLCDD": "LCDD non disponibile",
+    "noShippingLocation": "Il luogo di spedizione non è disponibile",
+    "noBuyer": "Fornitore non disponibile",
+    "noUCR": "UCR non disponibile",
+    "noAWB": "AWB non disponibile",
+    "noCarrierTracking": "Tracking corriere non disponibile",
+    "noCarrier": "Nome corriere non disponibile",
+    "MST_LSTAR": "Inserimento ordine cliente",
+    "MST_L100": "Chiarita l'immissione dell'ordine",
+    "MST_L200": "Call-Off ordine/ordine  ",
+    "MST_L210": "Call-Off ordine/ordine presso l'unità di consegna/lavori",
+    "MST_L220": "Inserimento dell'ordine chiarito all'unità di consegna / lavori",
+    "MST_L230": "Conferma dell'ordine/call-off dell'ordine",
+    "MST_L240": "Passaggio al processo successivo",
+    "MST_L290": "Inizio della consegna",
+    "MST_L300": "Pronto per la spedizione",
+    "MST_L310": "In approntamento",
+    "MST_L311": "Ricevuta da parte di Spedizioniere / Vettore",
+    "MST_L313": "Trasferimento al prossimo agente di spedizione",
+    "MST_L315": "Deposito ricevute da parte dell'agente di spedizione principale",
+    "MST_L318": "Rimozione da parte dell'agente marittimo principale",
+    "MST_L320": "Inizio del trasporto ",
+    "MST_L330": "Arrivo all'aeroporto / porto di destinazione",
+    "MST_L335": "Disposizione per la dogana di importazione, destinatario informato",
+    "MST_L340": "Inizio dello sdoganamento",
+    "MST_L350": "Fine dello sdoganamento",
+    "MST_L360": "Inizio del trasporto locale",
+    "MST_L380": "Materiale al punto di consolidamento",
+    "MST_L390": "Inizio del trasporto locale dal punto di consolidamento al cliente",
+    "MST_L400": "Materiale al punto di destinazione"
+  },
+  "DialogUtil": {
+    "yesNo": "Sì;no",
+    "salesOrder": "Numero ordine di vendita",
+    "purchaseOrder": "Numero ordine di acquisto",
+    "deliveryNote": "Numero bolla di consegna",
+    "unknown": "Non sono sicuro",
+    "ucr": "Numero UCR",
+    "customerPo": "Ordine di acquisto del cliente"
+  },
+  "Handlers": {
+    "uncaught": "Ops!, qualcosa è andato storto..."
+  }
+}

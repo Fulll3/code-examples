@@ -1,0 +1,37 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "eofline": false,
+    "ordered-imports": false,
+    "arrow-parens": false,
+    "object-literal-sort-keys": false,
+    "no-unused-expression": false,
+    "member-ordering": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format"
+    ],
+    "max-line-length": [
+      true,
+      {        
+        "ignore-multiline-template-literals": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }
+    ]
+  },
+  "rulesDirectory": []
+}
